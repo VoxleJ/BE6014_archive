@@ -1,0 +1,679 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>BE601HW2_problem2</title><meta name="generator" content="MATLAB 9.5"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2020-10-02"><meta name="DC.source" content="BE601HW2_problem2.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><pre class="codeinput">close <span class="string">all</span>
+<span class="comment">%All in um^3/sec</span>
+G_cell = 100 * 35;
+G_out = 800 * 35;
+G_infy = 40 * 5 * 35;
+
+G_raw = [4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    -G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,-G_out,4*G_out,0,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    -G_out,0,0,0,0,0,0,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,-G_out,0,0,0,0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,-G_out,0,0,0,0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,-G_out,0,0,0,0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,-G_out,0,0,0,0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,-G_out,0,0,0,0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,-G_out,0,0,0,0,0,-G_out,4*G_out,0,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,-G_out,0,0,0,0,0,0,3.5 * G_out,-G_out,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,-G_out,0,0,0,0,0,-G_out,3*G_out + G_cell,-G_out,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,-G_out,0,0,0,0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,-G_out,0,0,0,0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,-G_out,0,0,0,0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,-G_out,0,0,0,0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,-G_out,0,0,0,0,0,-G_out,2 * G_out + 1.5 * G_cell,0,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_out,0,0,0,0,0,0,3*G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_out,0,0,0,0,0,-G_cell,3*G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-(0.5*G_out + 0.5*G_cell),0,0,0,0,0,-G_cell,2*G_cell + 2*G_out,-(0.5*G_cell + 0.5*G_out),0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_out,0,0,0,0,0,-0.5*(G_cell + G_out),3*G_out + G_cell,-0.5 * (G_cell + G_out),0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-(0.5*G_out + 0.5*G_cell),0,0,0,0,0,-(0.5*G_out + 0.5*G_cell),4,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_out,0,0,0,0,0,-G_out,4*G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_out,0,0,0,0,0,-G_cell,3*G_cell,0,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,0,3*G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,4*G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,4*G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,4*G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,4*G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,4*G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,3 * G_cell,0,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,0,3 * G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,4 * G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,4 * G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,4*G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,4*G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,4*G_cell,-G_cell,0,0,0,0,0,-G_cell,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,3 * G_cell,0,0,0,0,0,0,-G_cell;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,0,2*G_cell + G_infy,-G_cell,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,3*G_cell + G_infy,-G_cell,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,3*G_cell + G_infy,-G_cell,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,3*G_cell + G_infy,-G_cell,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,3*G_cell + G_infy,-G_cell,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,3*G_cell + G_infy,-G_cell;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-0.5*(G_cell + G_infy),2*G_cell + G_infy];
+
+b = [200 100 100 100 100 100 200 100 100 100 100 100 100 100 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0];
+
+[L, U, P] = lu(G_raw);
+
+fig0 = figure(<span class="string">'Name'</span>, <span class="string">'Spy of G'</span>);
+spy(G_raw)
+hold <span class="string">on</span>
+title(<span class="string">'Spy of G_{raw}'</span>)
+fig1 = figure(<span class="string">'Name'</span>, <span class="string">'Spy of L'</span>);
+spy(L)
+hold <span class="string">on</span>
+title(<span class="string">'Spy of L'</span>)
+fig2 = figure(<span class="string">'Name'</span>, <span class="string">'Spy of U'</span>);
+spy(U)
+hold <span class="string">on</span>
+title(<span class="string">'Spy of U'</span>)
+fig3 = figure(<span class="string">'Name'</span>, <span class="string">'Spy of P'</span>);
+spy(P)
+hold <span class="string">on</span>
+title(<span class="string">'Spy of P'</span>)
+
+C_total = G_raw\b';
+
+
+
+C_final = reshape(C_total, [7, 7]).';
+
+conc_top = 0.1*ones(9,1)';
+conc_side = 0.1*ones(9,1);
+conc_side(5:8) = NaN;
+
+C_int = padarray(C_final, [1,1], 0,<span class="string">'both'</span>);
+
+C_int(:,9) = conc_side;
+C_int(:,1) = conc_side;
+C_int(1,:) = conc_top;
+C_int(9,:) = [];
+C_final2 = C_int;
+
+x = 0:5:40;
+y = 0:5:35;
+[X,Y] = meshgrid(x,y);
+fig4 = figure(<span class="string">'Name'</span>, <span class="string">'PseudoColor Plot'</span>);
+
+h2 = pcolor(X,Y, C_final2);
+title(<span class="string">'Concentration Plot'</span>)
+axis <span class="string">ij</span>
+h = colorbar;
+ylabel({<span class="string">'Microns'</span>});
+xlabel({<span class="string">'Microns'</span>});
+ylabel(h, <span class="string">'Concentration (mM)'</span>);
+
+
+
+fig5 = figure(<span class="string">'Name'</span>, <span class="string">'Flux Vectors and Iso-Concentration Contours'</span>);
+dx = diff(X(1,1:2));
+dy = diff(Y(1:2,1));
+[PX, PY] = gradient(C_final2, dx, dy);
+quiver(X, Y, -PX, -PY, 1, <span class="string">'blue'</span>);
+hold <span class="string">on</span>
+contour(X, Y, C_final2,[0.05:0.05: 0.1])
+h3 = colorbar;
+axis <span class="string">ij</span>
+ylabel(h3, <span class="string">'Concentration (M)'</span>);
+ylabel({<span class="string">'Microns'</span>});
+xlabel({<span class="string">'Microns'</span>});
+title(<span class="string">'Flux Vectors and Iso-Concentration Contours'</span>)
+hold <span class="string">off</span>
+
+<span class="comment">%Echoing all outputs</span>
+diary <span class="string">vj_problem2.txt</span>
+echo <span class="string">on</span>
+sparse(G_raw)
+sparse(b)
+C_total
+C_final
+C_final2
+echo <span class="string">off</span>
+</pre><pre class="codeoutput">sparse(G_raw)
+
+ans =
+
+   (1,1)         112000
+   (2,1)         -28000
+   (8,1)         -28000
+   (1,2)         -28000
+   (2,2)         112000
+   (3,2)         -28000
+   (9,2)         -28000
+   (2,3)         -28000
+   (3,3)         112000
+   (4,3)         -28000
+  (10,3)         -28000
+   (3,4)         -28000
+   (4,4)         112000
+   (5,4)         -28000
+  (11,4)         -28000
+   (4,5)         -28000
+   (5,5)         112000
+   (6,5)         -28000
+  (12,5)         -28000
+   (5,6)         -28000
+   (6,6)         112000
+   (7,6)         -28000
+  (13,6)         -28000
+   (6,7)         -28000
+   (7,7)         112000
+  (14,7)         -28000
+   (1,8)         -28000
+   (8,8)         112000
+   (9,8)         -28000
+  (15,8)         -28000
+   (2,9)         -28000
+   (8,9)         -28000
+   (9,9)         112000
+  (10,9)         -28000
+  (16,9)         -28000
+   (3,10)        -28000
+   (9,10)        -28000
+  (10,10)        112000
+  (11,10)        -28000
+  (17,10)        -28000
+   (4,11)        -28000
+  (10,11)        -28000
+  (11,11)        112000
+  (12,11)        -28000
+  (18,11)        -28000
+   (5,12)        -28000
+  (11,12)        -28000
+  (12,12)        112000
+  (13,12)        -28000
+  (19,12)        -28000
+   (6,13)        -28000
+  (12,13)        -28000
+  (13,13)        112000
+  (14,13)        -28000
+  (20,13)        -28000
+   (7,14)        -28000
+  (13,14)        -28000
+  (14,14)        112000
+  (21,14)        -28000
+   (8,15)        -28000
+  (15,15)         98000
+  (16,15)        -28000
+  (22,15)        -28000
+   (9,16)        -28000
+  (15,16)        -28000
+  (16,16)         87500
+  (17,16)        -28000
+  (23,16)        -28000
+  (10,17)        -28000
+  (16,17)        -28000
+  (17,17)        112000
+  (18,17)        -28000
+  (24,17)        -15750
+  (11,18)        -28000
+  (17,18)        -28000
+  (18,18)        112000
+  (19,18)        -28000
+  (25,18)        -28000
+  (12,19)        -28000
+  (18,19)        -28000
+  (19,19)        112000
+  (20,19)        -28000
+  (26,19)        -15750
+  (13,20)        -28000
+  (19,20)        -28000
+  (20,20)        112000
+  (21,20)        -28000
+  (27,20)        -28000
+  (14,21)        -28000
+  (20,21)        -28000
+  (21,21)         61250
+  (28,21)        -28000
+  (15,22)         -3500
+  (22,22)         10500
+  (23,22)         -3500
+  (29,22)         -3500
+  (16,23)         -3500
+  (22,23)         -3500
+  (23,23)         10500
+  (24,23)         -3500
+  (30,23)         -3500
+  (17,24)        -28000
+  (23,24)         -3500
+  (24,24)         63000
+  (25,24)        -15750
+  (31,24)         -3500
+  (18,25)        -28000
+  (24,25)        -15750
+  (25,25)         87500
+  (26,25)        -15750
+  (32,25)         -3500
+  (19,26)        -28000
+  (25,26)        -15750
+  (26,26)             4
+  (27,26)        -28000
+  (33,26)         -3500
+  (20,27)         -3500
+  (26,27)         -3500
+  (27,27)         14000
+  (28,27)         -3500
+  (34,27)         -3500
+  (21,28)         -3500
+  (27,28)         -3500
+  (28,28)         10500
+  (35,28)         -3500
+  (22,29)         -3500
+  (29,29)         10500
+  (30,29)         -3500
+  (36,29)         -3500
+  (23,30)         -3500
+  (29,30)         -3500
+  (30,30)         14000
+  (31,30)         -3500
+  (37,30)         -3500
+  (24,31)        -28000
+  (30,31)         -3500
+  (31,31)         14000
+  (32,31)         -3500
+  (38,31)         -3500
+  (25,32)         -3500
+  (31,32)         -3500
+  (32,32)         14000
+  (33,32)         -3500
+  (39,32)         -3500
+  (26,33)         -3500
+  (32,33)         -3500
+  (33,33)         14000
+  (34,33)         -3500
+  (40,33)         -3500
+  (27,34)         -3500
+  (33,34)         -3500
+  (34,34)         14000
+  (35,34)         -3500
+  (41,34)         -3500
+  (28,35)         -3500
+  (34,35)         -3500
+  (35,35)         10500
+  (42,35)         -3500
+  (29,36)         -3500
+  (36,36)         10500
+  (37,36)         -3500
+  (43,36)         -3500
+  (30,37)         -3500
+  (36,37)         -3500
+  (37,37)         14000
+  (38,37)         -3500
+  (44,37)         -3500
+  (31,38)         -3500
+  (37,38)         -3500
+  (38,38)         14000
+  (39,38)         -3500
+  (45,38)         -3500
+  (32,39)         -3500
+  (38,39)         -3500
+  (39,39)         14000
+  (40,39)         -3500
+  (46,39)         -3500
+  (33,40)         -3500
+  (39,40)         -3500
+  (40,40)         14000
+  (41,40)         -3500
+  (47,40)         -3500
+  (34,41)         -3500
+  (40,41)         -3500
+  (41,41)         14000
+  (42,41)         -3500
+  (48,41)         -3500
+  (35,42)         -3500
+  (41,42)         -3500
+  (42,42)         10500
+  (49,42)         -3500
+  (36,43)         -3500
+  (43,43)         14000
+  (44,43)         -3500
+  (37,44)         -3500
+  (43,44)         -3500
+  (44,44)         17500
+  (45,44)         -3500
+  (38,45)         -3500
+  (44,45)         -3500
+  (45,45)         17500
+  (46,45)         -3500
+  (39,46)         -3500
+  (45,46)         -3500
+  (46,46)         17500
+  (47,46)         -3500
+  (40,47)         -3500
+  (46,47)         -3500
+  (47,47)         17500
+  (48,47)         -3500
+  (41,48)         -3500
+  (47,48)         -3500
+  (48,48)         17500
+  (49,48)         -5250
+  (42,49)         -3500
+  (48,49)         -3500
+  (49,49)         14000
+
+sparse(b)
+
+ans =
+
+   (1,1)      200
+   (1,2)      100
+   (1,3)      100
+   (1,4)      100
+   (1,5)      100
+   (1,6)      100
+   (1,7)      200
+   (1,8)      100
+   (1,9)      100
+   (1,10)     100
+   (1,11)     100
+   (1,12)     100
+   (1,13)     100
+   (1,14)     100
+
+C_total
+
+C_total =
+
+    0.0043
+    0.0051
+    0.0052
+    0.0048
+    0.0043
+    0.0040
+    0.0037
+    0.0050
+    0.0072
+    0.0073
+    0.0061
+    0.0048
+    0.0044
+    0.0035
+    0.0050
+    0.0079
+    0.0071
+    0.0040
+    0.0009
+    0.0016
+    0.0025
+    0.0356
+    0.0435
+    0.0093
+    0.0018
+   -0.0069
+   -0.0106
+    0.0032
+    0.0236
+    0.0222
+    0.0104
+    0.0033
+   -0.0017
+   -0.0034
+   -0.0002
+    0.0131
+    0.0114
+    0.0067
+    0.0028
+    0.0001
+   -0.0010
+   -0.0005
+    0.0042
+    0.0036
+    0.0023
+    0.0010
+    0.0002
+   -0.0002
+   -0.0002
+
+C_final
+
+C_final =
+
+    0.0043    0.0051    0.0052    0.0048    0.0043    0.0040    0.0037
+    0.0050    0.0072    0.0073    0.0061    0.0048    0.0044    0.0035
+    0.0050    0.0079    0.0071    0.0040    0.0009    0.0016    0.0025
+    0.0356    0.0435    0.0093    0.0018   -0.0069   -0.0106    0.0032
+    0.0236    0.0222    0.0104    0.0033   -0.0017   -0.0034   -0.0002
+    0.0131    0.0114    0.0067    0.0028    0.0001   -0.0010   -0.0005
+    0.0042    0.0036    0.0023    0.0010    0.0002   -0.0002   -0.0002
+
+C_final2
+
+C_final2 =
+
+  Columns 1 through 7
+
+    0.1000    0.1000    0.1000    0.1000    0.1000    0.1000    0.1000
+    0.1000    0.0043    0.0051    0.0052    0.0048    0.0043    0.0040
+    0.1000    0.0050    0.0072    0.0073    0.0061    0.0048    0.0044
+    0.1000    0.0050    0.0079    0.0071    0.0040    0.0009    0.0016
+       NaN    0.0356    0.0435    0.0093    0.0018   -0.0069   -0.0106
+       NaN    0.0236    0.0222    0.0104    0.0033   -0.0017   -0.0034
+       NaN    0.0131    0.0114    0.0067    0.0028    0.0001   -0.0010
+       NaN    0.0042    0.0036    0.0023    0.0010    0.0002   -0.0002
+
+  Columns 8 through 9
+
+    0.1000    0.1000
+    0.0037    0.1000
+    0.0035    0.1000
+    0.0025    0.1000
+    0.0032       NaN
+   -0.0002       NaN
+   -0.0005       NaN
+   -0.0002       NaN
+
+echo off
+
+
+</pre><img vspace="5" hspace="5" src="BE601HW2_problem2_01.png" alt=""> <img vspace="5" hspace="5" src="BE601HW2_problem2_02.png" alt=""> <img vspace="5" hspace="5" src="BE601HW2_problem2_03.png" alt=""> <img vspace="5" hspace="5" src="BE601HW2_problem2_04.png" alt=""> <img vspace="5" hspace="5" src="BE601HW2_problem2_05.png" alt=""> <img vspace="5" hspace="5" src="BE601HW2_problem2_06.png" alt=""> <p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+close all
+%All in um^3/sec
+G_cell = 100 * 35;
+G_out = 800 * 35;
+G_infy = 40 * 5 * 35;
+
+G_raw = [4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    -G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,-G_out,4*G_out,0,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    -G_out,0,0,0,0,0,0,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,-G_out,0,0,0,0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,-G_out,0,0,0,0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,-G_out,0,0,0,0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,-G_out,0,0,0,0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,-G_out,0,0,0,0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,-G_out,0,0,0,0,0,-G_out,4*G_out,0,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,-G_out,0,0,0,0,0,0,3.5 * G_out,-G_out,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,-G_out,0,0,0,0,0,-G_out,3*G_out + G_cell,-G_out,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,-G_out,0,0,0,0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,-G_out,0,0,0,0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,-G_out,0,0,0,0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,-G_out,0,0,0,0,0,-G_out,4*G_out,-G_out,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,-G_out,0,0,0,0,0,-G_out,2 * G_out + 1.5 * G_cell,0,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_out,0,0,0,0,0,0,3*G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_out,0,0,0,0,0,-G_cell,3*G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-(0.5*G_out + 0.5*G_cell),0,0,0,0,0,-G_cell,2*G_cell + 2*G_out,-(0.5*G_cell + 0.5*G_out),0,0,0,0,0,-G_out,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_out,0,0,0,0,0,-0.5*(G_cell + G_out),3*G_out + G_cell,-0.5 * (G_cell + G_out),0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-(0.5*G_out + 0.5*G_cell),0,0,0,0,0,-(0.5*G_out + 0.5*G_cell),4,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_out,0,0,0,0,0,-G_out,4*G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_out,0,0,0,0,0,-G_cell,3*G_cell,0,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,0,3*G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,4*G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,4*G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,4*G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,4*G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,4*G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,3 * G_cell,0,0,0,0,0,0,-G_cell,0,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,0,3 * G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,4 * G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,4 * G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,4*G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,4*G_cell,-G_cell,0,0,0,0,0,-G_cell,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,4*G_cell,-G_cell,0,0,0,0,0,-G_cell,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,3 * G_cell,0,0,0,0,0,0,-G_cell;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,0,2*G_cell + G_infy,-G_cell,0,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,3*G_cell + G_infy,-G_cell,0,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,3*G_cell + G_infy,-G_cell,0,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,3*G_cell + G_infy,-G_cell,0,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,3*G_cell + G_infy,-G_cell,0;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-G_cell,3*G_cell + G_infy,-G_cell;
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-G_cell,0,0,0,0,0,-0.5*(G_cell + G_infy),2*G_cell + G_infy];
+
+b = [200 100 100 100 100 100 200 100 100 100 100 100 100 100 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0];
+
+[L, U, P] = lu(G_raw);
+
+fig0 = figure('Name', 'Spy of G');
+spy(G_raw)
+hold on
+title('Spy of G_{raw}')
+fig1 = figure('Name', 'Spy of L');
+spy(L)
+hold on
+title('Spy of L')
+fig2 = figure('Name', 'Spy of U');
+spy(U)
+hold on
+title('Spy of U')
+fig3 = figure('Name', 'Spy of P');
+spy(P)
+hold on
+title('Spy of P')
+
+C_total = G_raw\b';
+
+
+
+C_final = reshape(C_total, [7, 7]).';
+
+conc_top = 0.1*ones(9,1)';
+conc_side = 0.1*ones(9,1);
+conc_side(5:8) = NaN;
+
+C_int = padarray(C_final, [1,1], 0,'both');
+
+C_int(:,9) = conc_side;
+C_int(:,1) = conc_side;
+C_int(1,:) = conc_top;
+C_int(9,:) = [];
+C_final2 = C_int;
+
+x = 0:5:40;
+y = 0:5:35;
+[X,Y] = meshgrid(x,y);
+fig4 = figure('Name', 'PseudoColor Plot');
+
+h2 = pcolor(X,Y, C_final2);
+title('Concentration Plot')
+axis ij
+h = colorbar;
+ylabel({'Microns'});
+xlabel({'Microns'});
+ylabel(h, 'Concentration (mM)');
+
+
+
+fig5 = figure('Name', 'Flux Vectors and Iso-Concentration Contours');
+dx = diff(X(1,1:2));
+dy = diff(Y(1:2,1));
+[PX, PY] = gradient(C_final2, dx, dy);
+quiver(X, Y, -PX, -PY, 1, 'blue');
+hold on
+contour(X, Y, C_final2,[0.05:0.05: 0.1])
+h3 = colorbar;
+axis ij
+ylabel(h3, 'Concentration (M)');
+ylabel({'Microns'});
+xlabel({'Microns'});
+title('Flux Vectors and Iso-Concentration Contours')
+hold off
+
+%Echoing all outputs
+diary vj_problem2.txt
+echo on
+sparse(G_raw)
+sparse(b)
+C_total
+C_final
+C_final2
+echo off
+
+
+
+##### SOURCE END #####
+--></body></html>
