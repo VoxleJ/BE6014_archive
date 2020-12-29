@@ -1,0 +1,434 @@
+BE601HW5_Problem1
+I have picked 0.05 for the alpha value
+From the chi-sqare table, the critical c_squared is = 5.99
+BE601HW5_Problem1
+I have picked 0.05 for the alpha value
+From the chi-sqare table, the critical c_squared is = 5.99
+BE601HW5_Problem1
+I have picked 0.05 for the alpha value
+From the chi-sqare table, the critical c_squared is = 5.99
+BE601HW5_Problem1
+I have picked 0.05 for the alpha value
+From the chi-sqare table, the critical c_squared is = 5.99
+BE601HW5_Problem1
+I have picked 0.05 for the alpha value
+From the chi-sqare table, the critical c_squared is = 5.99
+BE601HW5_Problem1
+I have picked 0.05 for the alpha value
+From the chi-sqare table, the critical c_squared is = 5.99
+BE601HW5_Problem1
+I have picked 0.05 for the alpha value
+From the chi-sqare table, the critical c_squared is = 5.99
+BE601HW5_Problem1
+I have picked 0.05 for the alpha value
+From the chi-sqare table, the critical c_squared is = 5.99
+BE601HW5_Problem1
+I have picked 0.05 for the alpha value
+From the chi-sqare table, the critical c_squared is = 5.99
+help find
+ <strong>find</strong>   Find indices of nonzero elements.
+    I = <strong>find</strong>(X) returns the linear indices corresponding to 
+    the nonzero entries of the array X.  X may be a logical expression. 
+    Use IND2SUB(SIZE(X),I) to calculate multiple subscripts from 
+    the linear indices I.
+  
+    I = <strong>find</strong>(X,K) returns at most the first K indices corresponding to 
+    the nonzero entries of the array X.  K must be a positive integer, 
+    but can be of any numeric type.
+ 
+    I = <strong>find</strong>(X,K,'first') is the same as I = <strong>find</strong>(X,K).
+ 
+    I = <strong>find</strong>(X,K,'last') returns at most the last K indices corresponding 
+    to the nonzero entries of the array X.
+ 
+    [I,J] = <strong>find</strong>(X,...) returns the row and column indices instead of
+    linear indices into X. This syntax is especially useful when working
+    with sparse matrices.  If X is an N-dimensional array where N > 2, then
+    J is a linear index over the N-1 trailing dimensions of X.
+ 
+    [I,J,V] = <strong>find</strong>(X,...) also returns a vector V containing the values
+    that correspond to the row and column indices I and J.
+ 
+    Example:
+       A = magic(3)
+       find(A > 5)
+ 
+    finds the linear indices of the 4 entries of the matrix A that are
+    greater than 5.
+ 
+       [rows,cols,vals] = find(speye(5))
+ 
+    finds the row and column indices and nonzero values of the 5-by-5
+    sparse identity matrix.
+ 
+    See also <a href="matlab:help sparse">sparse</a>, <a href="matlab:help ind2sub">ind2sub</a>, <a href="matlab:help relop">relop</a>, <a href="matlab:help nonzeros">nonzeros</a>.
+
+    <a href="matlab:doc find">Reference page for find</a>
+    <a href="matlab:matlab.internal.language.introspective.overloads.displayOverloads('find')">Other functions named find</a>
+
+find(my_distances > 5.99)
+
+ans =
+
+     4
+     6
+    11
+    25
+    33
+
+f_id(ans)
+
+ans =
+
+     4
+     6
+    11
+    25
+    33
+
+hist3(f_length, f_weight, [15 15])
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('internal.stats.parseArgs', 'C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\+internal\+stats\parseArgs.m', 42)" style="font-weight:bold">internal.stats.parseArgs</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\+internal\+stats\parseArgs.m',42,0)">line 42</a>)
+Wrong number of arguments.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hist3', 'C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\hist3.m', 95)" style="font-weight:bold">hist3</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\hist3.m',95,0)">line 95</a>)
+[nbins,ctrs,edges,~,plotArgs] = internal.stats.parseArgs(pnames,dflts,args{:});
+} 
+hist3(f_length, f_weight, 'nbins' = 15)
+ hist3(f_length, f_weight, 'nbins' = 15)
+                                   
+{Error: Incorrect use of '=' operator. To assign a value to a variable, use '='. To compare values for equality, use '=='.
+} 
+hist3(f_length, f_weight, 'nbins', 15)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hist3', 'C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\hist3.m', 101)" style="font-weight:bold">hist3</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\hist3.m',101,0)">line 101</a>)
+Ambiguous specification of bins.
+} 
+hist3(f_length, f_weight, 'Nbins', 15 'nbins', 15)
+ hist3(f_length, f_weight, 'Nbins', 15 'nbins', 15)
+                                       
+{Error: Invalid expression. Check for missing multiplication operator, missing or unbalanced delimiters, or other syntax error. To
+construct matrices, use brackets instead of parentheses.
+} 
+hist3(f_length, f_weight)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hist3', 'C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\hist3.m', 115)" style="font-weight:bold">hist3</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\hist3.m',115,0)">line 115</a>)
+The number of bins must be specified with a 2-element numeric vector.
+} 
+hist3(f_length, f_weight, 15)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('internal.stats.parseArgs', 'C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\+internal\+stats\parseArgs.m', 42)" style="font-weight:bold">internal.stats.parseArgs</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\+internal\+stats\parseArgs.m',42,0)">line 42</a>)
+Wrong number of arguments.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hist3', 'C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\hist3.m', 95)" style="font-weight:bold">hist3</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\hist3.m',95,0)">line 95</a>)
+[nbins,ctrs,edges,~,plotArgs] = internal.stats.parseArgs(pnames,dflts,args{:});
+} 
+hist3(f_length, f_weight, 15, 15)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('internal.stats.parseArgs', 'C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\+internal\+stats\parseArgs.m', 42)" style="font-weight:bold">internal.stats.parseArgs</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\+internal\+stats\parseArgs.m',42,0)">line 42</a>)
+Parameter name must be text.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hist3', 'C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\hist3.m', 95)" style="font-weight:bold">hist3</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\hist3.m',95,0)">line 95</a>)
+[nbins,ctrs,edges,~,plotArgs] = internal.stats.parseArgs(pnames,dflts,args{:});
+} 
+hist3(f_length, f_weight, [15 15])
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('internal.stats.parseArgs', 'C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\+internal\+stats\parseArgs.m', 42)" style="font-weight:bold">internal.stats.parseArgs</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\+internal\+stats\parseArgs.m',42,0)">line 42</a>)
+Wrong number of arguments.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hist3', 'C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\hist3.m', 95)" style="font-weight:bold">hist3</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\hist3.m',95,0)">line 95</a>)
+[nbins,ctrs,edges,~,plotArgs] = internal.stats.parseArgs(pnames,dflts,args{:});
+} 
+hist3(f_length, f_weight, 'Nbins', 15)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hist3', 'C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\hist3.m', 101)" style="font-weight:bold">hist3</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\hist3.m',101,0)">line 101</a>)
+Ambiguous specification of bins.
+} 
+hist3(f_length, f_weight, 'Nbins', [15 15])
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hist3', 'C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\hist3.m', 101)" style="font-weight:bold">hist3</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\hist3.m',101,0)">line 101</a>)
+Ambiguous specification of bins.
+} 
+nbinx = 15
+
+nbinx =
+
+    15
+
+nbiny = 15
+
+nbiny =
+
+    15
+
+hist3(f_length, f_weight, 'Nbins', [nbinx nbiny])
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hist3', 'C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\hist3.m', 101)" style="font-weight:bold">hist3</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\hist3.m',101,0)">line 101</a>)
+Ambiguous specification of bins.
+} 
+hist3(f_length, f_weight, 'Nbins', [nbinx,nbiny])
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hist3', 'C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\hist3.m', 101)" style="font-weight:bold">hist3</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\stats\stats\hist3.m',101,0)">line 101</a>)
+Ambiguous specification of bins.
+} 
+[f_length f_weight]
+
+ans =
+
+    6.5228    3.0148
+    7.0412    5.5837
+   11.6835    6.4379
+    0.9403    3.1805
+    6.1353    4.8552
+   14.8581   10.7478
+    5.7214    3.9023
+    5.7085    4.3600
+    4.8817    5.9650
+   11.1655   10.5426
+    0.6069    0.1482
+    7.7013   10.6600
+    8.6099    5.3994
+    8.6439    8.6178
+   10.6874   10.2790
+    9.6550   10.4405
+    9.2699    6.4215
+    4.6448    5.7090
+    8.4101    6.8231
+    3.2821    3.8410
+   10.3278    8.5017
+    7.5434    7.5705
+    9.3679    6.8073
+    6.7215    6.7666
+   11.5363   14.0290
+   10.7594    8.0879
+    3.5136    6.6971
+    2.6356    3.8829
+    2.6622    3.7563
+    9.8818    7.0266
+    9.6282    8.8368
+    5.3545    4.2586
+   10.0820    3.9416
+    8.4149    7.2777
+    3.3982    4.2428
+    5.6048    6.6299
+    4.4484    5.7570
+   11.2357    9.8254
+    7.3228    8.6207
+    3.5981    2.4554
+    4.9605    2.5826
+    6.3068    7.3778
+   10.5454    8.6616
+    8.3138    5.1533
+   10.0310   10.4109
+    9.1244    7.5191
+    8.2364    7.3540
+    5.7832    6.6886
+   10.1759    9.4541
+    7.3690    9.9491
+    4.9243    5.2196
+    3.4498    1.5455
+   11.2960   10.4467
+    9.6475    5.7108
+    4.6268    8.2624
+    7.0218    5.3708
+   10.1528   10.9932
+    5.5918    4.3442
+    8.8850    5.0175
+    9.6248    9.6595
+    6.2358    3.4319
+    7.2174    8.1162
+   10.2150    8.8054
+   10.0861    7.5336
+    8.8904    6.6389
+    9.4284   11.8928
+   10.0431    7.0307
+    5.4292    5.5723
+    7.4404    4.8048
+   10.8521    6.4326
+    6.9184    5.3418
+    7.4945   10.3878
+   12.7111    8.0646
+    6.6618    5.0156
+    8.7110    6.3431
+    6.6049    7.9421
+    7.4392    4.0127
+    9.8530    9.0582
+    6.6807    3.6766
+    8.7251    7.0153
+    9.3351    3.6976
+    4.8501    6.8655
+    9.2325    8.9480
+    2.0856    3.1904
+    8.3921    7.8238
+   13.2304    9.4341
+   11.6296   10.8860
+    8.1102    7.3137
+    8.1516    9.2435
+    9.2699    7.2628
+   10.1261    6.4890
+    8.0007    6.9205
+   12.0394    8.1972
+    6.7401    8.3475
+    2.6997    4.7620
+    5.1948    4.1113
+    7.3220    6.4036
+    8.2101    9.5801
+    5.3607    5.0730
+   10.8516    6.7576
+
+a11 = ans
+
+a11 =
+
+    6.5228    3.0148
+    7.0412    5.5837
+   11.6835    6.4379
+    0.9403    3.1805
+    6.1353    4.8552
+   14.8581   10.7478
+    5.7214    3.9023
+    5.7085    4.3600
+    4.8817    5.9650
+   11.1655   10.5426
+    0.6069    0.1482
+    7.7013   10.6600
+    8.6099    5.3994
+    8.6439    8.6178
+   10.6874   10.2790
+    9.6550   10.4405
+    9.2699    6.4215
+    4.6448    5.7090
+    8.4101    6.8231
+    3.2821    3.8410
+   10.3278    8.5017
+    7.5434    7.5705
+    9.3679    6.8073
+    6.7215    6.7666
+   11.5363   14.0290
+   10.7594    8.0879
+    3.5136    6.6971
+    2.6356    3.8829
+    2.6622    3.7563
+    9.8818    7.0266
+    9.6282    8.8368
+    5.3545    4.2586
+   10.0820    3.9416
+    8.4149    7.2777
+    3.3982    4.2428
+    5.6048    6.6299
+    4.4484    5.7570
+   11.2357    9.8254
+    7.3228    8.6207
+    3.5981    2.4554
+    4.9605    2.5826
+    6.3068    7.3778
+   10.5454    8.6616
+    8.3138    5.1533
+   10.0310   10.4109
+    9.1244    7.5191
+    8.2364    7.3540
+    5.7832    6.6886
+   10.1759    9.4541
+    7.3690    9.9491
+    4.9243    5.2196
+    3.4498    1.5455
+   11.2960   10.4467
+    9.6475    5.7108
+    4.6268    8.2624
+    7.0218    5.3708
+   10.1528   10.9932
+    5.5918    4.3442
+    8.8850    5.0175
+    9.6248    9.6595
+    6.2358    3.4319
+    7.2174    8.1162
+   10.2150    8.8054
+   10.0861    7.5336
+    8.8904    6.6389
+    9.4284   11.8928
+   10.0431    7.0307
+    5.4292    5.5723
+    7.4404    4.8048
+   10.8521    6.4326
+    6.9184    5.3418
+    7.4945   10.3878
+   12.7111    8.0646
+    6.6618    5.0156
+    8.7110    6.3431
+    6.6049    7.9421
+    7.4392    4.0127
+    9.8530    9.0582
+    6.6807    3.6766
+    8.7251    7.0153
+    9.3351    3.6976
+    4.8501    6.8655
+    9.2325    8.9480
+    2.0856    3.1904
+    8.3921    7.8238
+   13.2304    9.4341
+   11.6296   10.8860
+    8.1102    7.3137
+    8.1516    9.2435
+    9.2699    7.2628
+   10.1261    6.4890
+    8.0007    6.9205
+   12.0394    8.1972
+    6.7401    8.3475
+    2.6997    4.7620
+    5.1948    4.1113
+    7.3220    6.4036
+    8.2101    9.5801
+    5.3607    5.0730
+   10.8516    6.7576
+
+hist3(a11, 'Nbins', [nbinx,nbiny])
+close all
+hist3(a11, 'Nbins', [nbinx,nbiny])
+BE601HW5_Problem1
+I have picked 0.05 for the alpha value
+From the chi-sqare table, the critical c_squared is = 5.99
+
+f2 = 
+
+  <a href="matlab:helpPopup matlab.ui.Figure" style="font-weight:bold">Figure</a> (3: Hist3D) with properties:
+
+      Number: 3
+        Name: 'Hist3D'
+       Color: [0.9400 0.9400 0.9400]
+    Position: [680 558 560 420]
+       Units: 'pixels'
+
+  Show <a href="matlab:if exist('f2', 'var'), matlab.graphics.internal.getForDisplay('f2', f2, 'matlab.ui.Figure'), else, matlab.graphics.internal.getForDisplay('f2'), end">all properties</a>
+
+{Undefined function or variable 'nbinx'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BE601HW5_Problem1', 'G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW5\BE601HW5_Problem1.m', 109)" style="font-weight:bold">BE601HW5_Problem1</a> (<a href="matlab: opentoline('G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW5\BE601HW5_Problem1.m',109,0)">line 109</a>)
+hist3([f_length f_weight], 'Nbins', [nbinx,nbiny])
+} 
+BE601HW5_Problem1
+I have picked 0.05 for the alpha value
+From the chi-sqare table, the critical c_squared is = 5.99
+BE601HW5_Problem1
+I have picked 0.05 for the alpha value
+From the chi-sqare table, the critical c_squared is = 5.99
+BE601HW5_Problem1
+I have picked 0.05 for the alpha value
+From the chi-sqare table, the critical c_squared is = 5.99
+
+h3 =
+
+     1     0     0     1     0     0     0     0     0     0     0     0     0     0     0
+     0     0     0     1     0     0     0     0     0     0     0     0     0     0     0
+     0     1     0     2     3     0     0     0     0     0     0     0     0     0     0
+     0     0     1     0     0     0     0     1     0     0     0     0     0     0     0
+     0     0     1     0     2     1     3     1     1     0     0     0     0     0     0
+     0     0     0     1     3     3     0     3     0     0     0     0     0     0     0
+     0     0     0     2     0     4     0     1     3     0     0     0     0     0     0
+     0     0     0     0     1     1     1     2     1     2     1     2     0     0     0
+     0     0     0     0     0     3     1     6     1     1     1     0     0     0     0
+     0     0     0     1     1     0     2     5     0     3     1     2     1     0     0
+     0     0     0     0     0     0     2     1     1     3     2     1     0     0     0
+     0     0     0     0     0     0     1     0     0     0     1     3     0     0     1
+     0     0     0     0     0     0     0     0     2     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     1     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0     1     0     0     0
+
+BE601HW5_Problem1
+I have picked 0.05 for the alpha value
+From the chi-sqare table, the critical c_squared is = 5.99
+BE601HW5_Problem1
+I have picked 0.05 for the alpha value
+From the chi-sqare table, the critical c_squared is = 5.99
+BE601HW5_Problem1
+I have picked 0.05 for the alpha value
+From the chi-sqare table, the critical c_squared is = 5.99

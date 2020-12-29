@@ -1,0 +1,73 @@
+disp('right eigenvectors')
+right eigenvectors
+V
+
+V =
+
+   -0.5774    0.8165    0.0000
+   -0.5774   -0.4082   -0.7071
+   -0.5774   -0.4082    0.7071
+
+
+disp('left eigenvectors')
+left eigenvectors
+W
+
+W =
+
+   -0.5774    0.8165    0.0000
+   -0.5774   -0.4082   -0.7071
+   -0.5774   -0.4082    0.7071
+
+echo off
+
+BE601HW4_Problem3
+The initial cube  was collapsed such that the midpoint was the origin with a abs slope of 1/3. The point 1,1,1 and 2,2,2 became the same 0,0,0 when transformed.
+disp('right eigenvectors')
+right eigenvectors
+V
+
+V =
+
+   -0.5774    0.8165    0.0000
+   -0.5774   -0.4082   -0.7071
+   -0.5774   -0.4082    0.7071
+
+
+disp('left eigenvectors')
+left eigenvectors
+W
+
+W =
+
+   -0.5774    0.8165    0.0000
+   -0.5774   -0.4082   -0.7071
+   -0.5774   -0.4082    0.7071
+
+echo off
+
+BE601HW4_Problem3
+The initial cube  was collapsed such that the midpoint was the origin with a abs slope of 1/3. The point 1,1,1 and 2,2,2 became the same 0,0,0 when transformed.
+disp('right eigenvectors')
+right eigenvectors
+V
+
+V =
+
+   -0.5774    0.8165    0.0000
+   -0.5774   -0.4082   -0.7071
+   -0.5774   -0.4082    0.7071
+
+
+disp('left eigenvectors')
+left eigenvectors
+W
+
+W =
+
+   -0.5774    0.8165    0.0000
+   -0.5774   -0.4082   -0.7071
+   -0.5774   -0.4082    0.7071
+
+echo off
+

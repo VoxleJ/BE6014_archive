@@ -1,0 +1,68 @@
+BE601HW5_Problem2b
+BE601HW5_Problem2b
+BE601HW5_Problem2b
+{Index in position 2 exceeds array bounds (must not exceed 1).
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BE601HW5_Problem2b', 'G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW5\BE601HW5_Problem2b.m', 30)" style="font-weight:bold">BE601HW5_Problem2b</a> (<a href="matlab: opentoline('G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW5\BE601HW5_Problem2b.m',30,0)">line 30</a>)
+    if abs(a(:,ii) - a(:,ii+1)) < 0.00005
+} 
+BE601HW5_Problem2b
+{Index in position 2 is invalid. Array indices must be positive integers or logical values.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BE601HW5_Problem2b', 'G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW5\BE601HW5_Problem2b.m', 31)" style="font-weight:bold">BE601HW5_Problem2b</a> (<a href="matlab: opentoline('G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW5\BE601HW5_Problem2b.m',31,0)">line 31</a>)
+    if abs(a(:,ii) - a(:,ii-1)) < 0.00005
+} 
+BE601HW5_Problem2b
+{Unable to perform assignment because the size of the left side is 1-by-1 and the size of the right side is 15-by-1.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BE601HW5_Problem2b', 'G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW5\BE601HW5_Problem2b.m', 29)" style="font-weight:bold">BE601HW5_Problem2b</a> (<a href="matlab: opentoline('G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW5\BE601HW5_Problem2b.m',29,0)">line 29</a>)
+    a(:,ii+1) = I;
+} 
+BE601HW5_Problem2b
+{Unable to perform assignment because the size of the left side is 1-by-1 and the size of the right side is 15-by-1.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BE601HW5_Problem2b', 'G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW5\BE601HW5_Problem2b.m', 29)" style="font-weight:bold">BE601HW5_Problem2b</a> (<a href="matlab: opentoline('G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW5\BE601HW5_Problem2b.m',29,0)">line 29</a>)
+    a(:,ii+1) = I;
+} 
+BE601HW5_Problem2b
+{Unable to perform assignment because the size of the left side is 13-by-1 and the size of the right side is 15-by-1.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BE601HW5_Problem2b', 'G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW5\BE601HW5_Problem2b.m', 29)" style="font-weight:bold">BE601HW5_Problem2b</a> (<a href="matlab: opentoline('G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW5\BE601HW5_Problem2b.m',29,0)">line 29</a>)
+    a(:,ii+1) = I;
+} 
+BE601HW5_Problem2b
+{Index in position 2 is invalid. Array indices must be positive integers or logical values.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BE601HW5_Problem2b', 'G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW5\BE601HW5_Problem2b.m', 31)" style="font-weight:bold">BE601HW5_Problem2b</a> (<a href="matlab: opentoline('G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW5\BE601HW5_Problem2b.m',31,0)">line 31</a>)
+    if abs(a(:,ii) - a(:,ii-1)) < 0.00005
+} 
+BE601HW5_Problem2b
+{Index in position 2 is invalid. Array indices must be positive integers or logical values.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BE601HW5_Problem2b', 'G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW5\BE601HW5_Problem2b.m', 31)" style="font-weight:bold">BE601HW5_Problem2b</a> (<a href="matlab: opentoline('G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW5\BE601HW5_Problem2b.m',31,0)">line 31</a>)
+    if abs(a(:,ii-1) - a(:,ii)) < 0.00005
+} 
+opentoline('G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW5\BE601HW5_Problem2b.m',31,0)
+BE601HW5_Problem2b
+BE601HW5_Problem2b
+ if abs(xg(:,kk) - xg(:,kk+1)) < 0.00001;
+I_inf = a(:,3788)
+
+I_inf =
+
+    0.0018
+    0.0022
+    0.0022
+    0.0026
+    0.0025
+    0.0034
+    0.0059
+    0.0159
+    0.0162
+    0.0285
+    0.0170
+    0.0131
+    0.0129
+    0.0031
+    0.0044
+
