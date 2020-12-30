@@ -1,0 +1,37 @@
+disp('Part 2')
+Part 2
+disp('Iteration using guess [3.5;3.7]');
+Iteration using guess [3.5;3.7]
+xt
+
+xt =
+
+    3.5000   -0.0445    0.0002   -0.0000    0.0000   -0.0000
+    3.7000   -0.0445    0.0002   -0.0000    0.0000   -0.0000
+
+disp('Considering we are using tangents, we should expect the behavior for the first guess to be far and as the overall tangent "size" decreases, the answer iterate closer to true values.');
+Considering we are using tangents, we should expect the behavior for the first guess to be far and as the overall tangent "size" decreases, the answer iterate closer to true values.
+
+disp('Part 3')
+Part 3
+disp('Iteration using guess [1;7]')
+Iteration using guess [1;7]
+xt2
+
+xt2 =
+
+    1.0000    0.0388   -0.0002    0.0000   -0.0000
+    7.0000    0.0388   -0.0002    0.0000   -0.0000
+
+
+echo off
+BE601HW6_Prob1
+{Undefined function or variable 'dips'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BE601HW6_Prob1', 'G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW6\BE601HW6_Prob1.m', 149)" style="font-weight:bold">BE601HW6_Prob1</a> (<a href="matlab: opentoline('G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW6\BE601HW6_Prob1.m',149,0)">line 149</a>)
+dips('The first three PCs can explain ')
+} 
+BE601HW6_Prob1
+The first three PCs can explain 
+Part 1
+BE601HW6_Prob1

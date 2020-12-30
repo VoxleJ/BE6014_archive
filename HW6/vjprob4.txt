@@ -1,0 +1,399 @@
+% 2nd max is 0.8335
+%index at 7,8 and 8,7
+%Surprise surprise, this is because both those images are of the same
+%person (Zooey Deschanel)
+
+%% Part 5
+%The first three PCs can explain 
+
+TotVar = (eigVal(1,1) + eigVal(2,2) + eigVal(3,3))/(sum(sum(eigVal)));
+
+% The reason that five are positive and five are negative in the second PC
+
+
+disp('In the second PC eigenvector and for group 1 photos, the entries are most influenced by mouth shape.');
+In the second PC eigenvector and for group 1 photos, the entries are most influenced by mouth shape.
+disp('For Group 2 photos, the last 3 entries all have the same sign and relatively large magnitudes as the most prominent features recongized are possibly')
+
+
+For Group 2 photos, the last 3 entries all have the same sign and relatively large magnitudes as the most prominent features recongized are possibly
+BE601HW6_Prob4
+{Error: <a href="matlab: opentoline('G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW6\BE601HW6_Prob4.m',96,6)">File: BE601HW6_Prob4.m Line: 96 Column: 6
+</a>Character vector is not terminated properly.
+} 
+opentoline('G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW6\BE601HW6_Prob4.m',96,6)
+BE601HW6_Prob4
+2nd max is 0.8335, index at 7,8 and 8, this is because both those images are of the same person Zooey Deschanel
+The first three PCs can explain
+
+TotVar =
+
+  <a href="matlab:helpPopup single" style="font-weight:bold">single</a>
+
+   77.2885
+
+percent of the total variance
+In the second PC eigenvector and for group 1 photos, the entries are most influenced by mouth shape.
+For Group 2 photos, the last 3 entries all have the same sign and relatively large magnitudes as the most prominent features recongized are possibly basic facial shape.
+For Group 3 photos those are images of the same person at different angles, so the features are largely the same.
+The oddball entry seems to be photo 4, as the abs(value) is the smallest.
+In the third PC eigenvector those psoitions (1,2.6) all correspond to people who are smiling wide showing their teeth. These reveal a nearly max intensity white.
+The nearly max instensity present will essentially act as a persisten max value through all our manipulations.
+Part 4 Values
+
+eigVal =
+
+  9×9 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> matrix
+
+   1.0e+04 *
+
+    1.8706         0         0         0         0         0         0         0         0
+         0    0.4649         0         0         0         0         0         0         0
+         0         0    0.4069         0         0         0         0         0         0
+         0         0         0    0.2418         0         0         0         0         0
+         0         0         0         0    0.0674         0         0         0         0
+         0         0         0         0         0    0.0736         0         0         0
+         0         0         0         0         0         0    0.1685         0         0
+         0         0         0         0         0         0         0    0.1234         0
+         0         0         0         0         0         0         0         0    0.1311
+
+
+eigVec =
+
+  9×9 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> matrix
+
+    0.1684    0.6266   -0.4424    0.2087    0.0736    0.1279    0.1221    0.5489    0.0407
+    0.2011    0.3782    0.6078   -0.5394   -0.0135    0.1064    0.2342    0.1459   -0.2618
+    0.3213    0.4964   -0.1796   -0.1047    0.0079   -0.0053   -0.3295   -0.7022    0.0740
+    0.1031    0.0275    0.1659    0.6053   -0.1171    0.4160    0.4302   -0.3100   -0.3560
+    0.1590    0.1282    0.2538    0.3810    0.2827   -0.7928    0.0151    0.0228   -0.1988
+    0.3944   -0.0560    0.4540    0.3302   -0.1951    0.2051   -0.4879    0.2414    0.3869
+    0.4900   -0.3555   -0.1909   -0.1093    0.5293    0.2243   -0.2283    0.1032   -0.4381
+    0.3828   -0.1655   -0.2502   -0.1018   -0.7534   -0.2627    0.0043    0.0943   -0.3278
+    0.4999   -0.2092   -0.0744   -0.1075    0.1219   -0.0966    0.5884   -0.0995    0.5558
+
+
+V_norm =
+
+  9×9 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> matrix
+
+    1.6335   -1.7627    1.0000   -0.3869   -0.0977   -0.1614   -0.2502   -0.7817   -0.0929
+    1.9506   -1.0639   -1.3737    1.0000    0.0179   -0.1342   -0.4801   -0.2077    0.5976
+    3.1168   -1.3962    0.4060    0.1941   -0.0105    0.0067    0.6753    1.0000   -0.1689
+    1.0000   -0.0773   -0.3750   -1.1223    0.1554   -0.5247   -0.8818    0.4414    0.8127
+    1.5422   -0.3607   -0.5737   -0.7064   -0.3752    1.0000   -0.0310   -0.0325    0.4538
+    3.8267    0.1575   -1.0260   -0.6121    0.2589   -0.2588    1.0000   -0.3438   -0.8833
+    4.7540    1.0000    0.4314    0.2026   -0.7025   -0.2829    0.4679   -0.1470    1.0000
+    3.7143    0.4656    0.5655    0.1888    1.0000    0.3314   -0.0088   -0.1342    0.7482
+    4.8495    0.5884    0.1681    0.1992   -0.1618    0.1219   -1.2060    0.1417   -1.2688
+
+Part 3 Values
+
+S =
+
+  9×9 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> matrix
+
+   1.0e+03 *
+
+    3.6726    0.5110    2.1887    0.3043    0.5569    0.5221    0.8432    1.1077    1.1248
+    0.5110    3.8449    1.4910    0.3265    0.9678    1.8129    0.9799    0.7803    1.4830
+    2.1887    1.4910    4.0326    0.4014    0.9264    1.9229    2.2882    2.0085    2.4174
+    0.3043    0.3265    0.4014    1.9335    0.8820    0.9947    0.6370    0.4982    0.8953
+    0.5569    0.9678    0.9264    0.8820    1.7316    1.6492    1.0286    0.7853    1.1327
+    0.5221    1.8129    1.9229    0.9947    1.6492    4.7529    3.2284    2.2420    3.2575
+    0.8432    0.9799    2.2882    0.6370    1.0286    3.2284    5.8348    3.8905    4.4829
+    1.1077    0.7803    2.0085    0.4982    0.7853    2.2420    3.8905    3.7344    3.5533
+    1.1248    1.4830    2.4174    0.8953    1.1327    3.2575    4.4829    3.5533    5.9452
+
+
+R =
+
+  9×9 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> matrix
+
+    1.0000    0.1360    0.5687    0.1142    0.2208    0.1250    0.1822    0.2991    0.2407
+    0.1360    1.0000    0.3787    0.1197    0.3751    0.4241    0.2069    0.2059    0.3102
+    0.5687    0.3787    1.0000    0.1438    0.3506    0.4392    0.4717    0.5176    0.4937
+    0.1142    0.1197    0.1438    1.0000    0.4820    0.3281    0.1897    0.1854    0.2641
+    0.2208    0.3751    0.3506    0.4820    1.0000    0.5749    0.3236    0.3088    0.3530
+    0.1250    0.4241    0.4392    0.3281    0.5749    1.0000    0.6131    0.5322    0.6128
+    0.1822    0.2069    0.4717    0.1897    0.3236    0.6131    1.0000    0.8335    0.7611
+    0.2991    0.2059    0.5176    0.1854    0.3088    0.5322    0.8335    1.0000    0.7541
+    0.2407    0.3102    0.4937    0.2641    0.3530    0.6128    0.7611    0.7541    1.0000
+
+BE601HW6_Prob4
+2nd max is 0.8335, index at 7,8 and 8, this is because both those images are of the same person Zooey Deschanel
+The first three PCs can explain
+
+TotVar =
+
+  <a href="matlab:helpPopup single" style="font-weight:bold">single</a>
+
+   77.2885
+
+percent of the total variance
+{Undefined function or variable 'n'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BE601HW6_Prob4', 'G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW6\BE601HW6_Prob4.m', 106)" style="font-weight:bold">BE601HW6_Prob4</a> (<a href="matlab: opentoline('G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW6\BE601HW6_Prob4.m',106,0)">line 106</a>)
+disp('In the second PC eigenvector and for group 1 photos, the entries are most influenced by mouth shape.'\n)
+} 
+BE601HW6_Prob4
+2nd max is 0.8335, index at 7,8 and 8, this is because both those images are of the same person Zooey Deschanel
+The first three PCs can explain
+
+TotVar =
+
+  <a href="matlab:helpPopup single" style="font-weight:bold">single</a>
+
+   77.2885
+
+percent of the total variance
+In the second PC eigenvector and for group 1 photos, the entries are most influenced by mouth shape.
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('disp')" style="font-weight:bold">disp</a>
+Not enough input arguments.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BE601HW6_Prob4', 'G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW6\BE601HW6_Prob4.m', 107)" style="font-weight:bold">BE601HW6_Prob4</a> (<a href="matlab: opentoline('G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW6\BE601HW6_Prob4.m',107,0)">line 107</a>)
+disp()
+} 
+BE601HW6_Prob4
+2nd max is 0.8335, index at 7,8 and 8, this is because both those images are of the same person Zooey Deschanel
+The first three PCs can explain
+
+TotVar =
+
+  <a href="matlab:helpPopup single" style="font-weight:bold">single</a>
+
+   77.2885
+
+percent of the total variance
+In the second PC eigenvector and for group 1 photos, the entries are most influenced by mouth shape.
+For Group 2 photos, the last 3 entries all have the same sign and relatively large magnitudes as the most prominent features recongized are possibly basic facial shape.
+For Group 3 photos those are images of the same person at different angles, so the features are largely the same.
+The oddball entry seems to be photo 4, as the abs(value) is the smallest.
+In the third PC eigenvector those psoitions (1,2.6) all correspond to people who are smiling wide showing their teeth. These reveal a nearly max intensity white.
+The nearly max instensity present will essentially act as a persisten max value through all our manipulations.
+Part 4 Values
+
+eigVal =
+
+  9×9 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> matrix
+
+   1.0e+04 *
+
+    1.8706         0         0         0         0         0         0         0         0
+         0    0.4649         0         0         0         0         0         0         0
+         0         0    0.4069         0         0         0         0         0         0
+         0         0         0    0.2418         0         0         0         0         0
+         0         0         0         0    0.0674         0         0         0         0
+         0         0         0         0         0    0.0736         0         0         0
+         0         0         0         0         0         0    0.1685         0         0
+         0         0         0         0         0         0         0    0.1234         0
+         0         0         0         0         0         0         0         0    0.1311
+
+
+eigVec =
+
+  9×9 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> matrix
+
+    0.1684    0.6266   -0.4424    0.2087    0.0736    0.1279    0.1221    0.5489    0.0407
+    0.2011    0.3782    0.6078   -0.5394   -0.0135    0.1064    0.2342    0.1459   -0.2618
+    0.3213    0.4964   -0.1796   -0.1047    0.0079   -0.0053   -0.3295   -0.7022    0.0740
+    0.1031    0.0275    0.1659    0.6053   -0.1171    0.4160    0.4302   -0.3100   -0.3560
+    0.1590    0.1282    0.2538    0.3810    0.2827   -0.7928    0.0151    0.0228   -0.1988
+    0.3944   -0.0560    0.4540    0.3302   -0.1951    0.2051   -0.4879    0.2414    0.3869
+    0.4900   -0.3555   -0.1909   -0.1093    0.5293    0.2243   -0.2283    0.1032   -0.4381
+    0.3828   -0.1655   -0.2502   -0.1018   -0.7534   -0.2627    0.0043    0.0943   -0.3278
+    0.4999   -0.2092   -0.0744   -0.1075    0.1219   -0.0966    0.5884   -0.0995    0.5558
+
+
+V_norm =
+
+  9×9 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> matrix
+
+    1.6335   -1.7627    1.0000   -0.3869   -0.0977   -0.1614   -0.2502   -0.7817   -0.0929
+    1.9506   -1.0639   -1.3737    1.0000    0.0179   -0.1342   -0.4801   -0.2077    0.5976
+    3.1168   -1.3962    0.4060    0.1941   -0.0105    0.0067    0.6753    1.0000   -0.1689
+    1.0000   -0.0773   -0.3750   -1.1223    0.1554   -0.5247   -0.8818    0.4414    0.8127
+    1.5422   -0.3607   -0.5737   -0.7064   -0.3752    1.0000   -0.0310   -0.0325    0.4538
+    3.8267    0.1575   -1.0260   -0.6121    0.2589   -0.2588    1.0000   -0.3438   -0.8833
+    4.7540    1.0000    0.4314    0.2026   -0.7025   -0.2829    0.4679   -0.1470    1.0000
+    3.7143    0.4656    0.5655    0.1888    1.0000    0.3314   -0.0088   -0.1342    0.7482
+    4.8495    0.5884    0.1681    0.1992   -0.1618    0.1219   -1.2060    0.1417   -1.2688
+
+Part 3 Values
+
+S =
+
+  9×9 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> matrix
+
+   1.0e+03 *
+
+    3.6726    0.5110    2.1887    0.3043    0.5569    0.5221    0.8432    1.1077    1.1248
+    0.5110    3.8449    1.4910    0.3265    0.9678    1.8129    0.9799    0.7803    1.4830
+    2.1887    1.4910    4.0326    0.4014    0.9264    1.9229    2.2882    2.0085    2.4174
+    0.3043    0.3265    0.4014    1.9335    0.8820    0.9947    0.6370    0.4982    0.8953
+    0.5569    0.9678    0.9264    0.8820    1.7316    1.6492    1.0286    0.7853    1.1327
+    0.5221    1.8129    1.9229    0.9947    1.6492    4.7529    3.2284    2.2420    3.2575
+    0.8432    0.9799    2.2882    0.6370    1.0286    3.2284    5.8348    3.8905    4.4829
+    1.1077    0.7803    2.0085    0.4982    0.7853    2.2420    3.8905    3.7344    3.5533
+    1.1248    1.4830    2.4174    0.8953    1.1327    3.2575    4.4829    3.5533    5.9452
+
+
+R =
+
+  9×9 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> matrix
+
+    1.0000    0.1360    0.5687    0.1142    0.2208    0.1250    0.1822    0.2991    0.2407
+    0.1360    1.0000    0.3787    0.1197    0.3751    0.4241    0.2069    0.2059    0.3102
+    0.5687    0.3787    1.0000    0.1438    0.3506    0.4392    0.4717    0.5176    0.4937
+    0.1142    0.1197    0.1438    1.0000    0.4820    0.3281    0.1897    0.1854    0.2641
+    0.2208    0.3751    0.3506    0.4820    1.0000    0.5749    0.3236    0.3088    0.3530
+    0.1250    0.4241    0.4392    0.3281    0.5749    1.0000    0.6131    0.5322    0.6128
+    0.1822    0.2069    0.4717    0.1897    0.3236    0.6131    1.0000    0.8335    0.7611
+    0.2991    0.2059    0.5176    0.1854    0.3088    0.5322    0.8335    1.0000    0.7541
+    0.2407    0.3102    0.4937    0.2641    0.3530    0.6128    0.7611    0.7541    1.0000
+
+BE601HW6_Prob4
+2nd max is 0.8335, index at 7,8 and 8, this is because both those images are of the same person Zooey Deschanel
+The first three PCs can explain
+
+TotVar =
+
+  <a href="matlab:helpPopup single" style="font-weight:bold">single</a>
+
+   77.2885
+
+percent of the total variance
+In the second PC eigenvector and for group 1 photos, the entries are most influenced by mouth shape.
+For Group 2 photos, the last 3 entries all have the same sign and relatively large magnitudes as the most prominent features recongized are possibly basic facial shape.
+For Group 3 photos those are images of the same person at different angles, so the features are largely the same.
+The oddball entry seems to be photo 4, as the abs(value) is the smallest.
+In the third PC eigenvector those psoitions (1,2.6) all correspond to people who are smiling wide showing their teeth. These reveal a nearly max intensity white.
+The nearly max instensity present will essentially act as a persisten max value through all our manipulations.
+Part 4 Values
+
+eigVal =
+
+  9×9 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> matrix
+
+   1.0e+04 *
+
+    1.8706         0         0         0         0         0         0         0         0
+         0    0.4649         0         0         0         0         0         0         0
+         0         0    0.4069         0         0         0         0         0         0
+         0         0         0    0.2418         0         0         0         0         0
+         0         0         0         0    0.0674         0         0         0         0
+         0         0         0         0         0    0.0736         0         0         0
+         0         0         0         0         0         0    0.1685         0         0
+         0         0         0         0         0         0         0    0.1234         0
+         0         0         0         0         0         0         0         0    0.1311
+
+
+eigVec =
+
+  9×9 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> matrix
+
+    0.1684    0.6266   -0.4424    0.2087    0.0736    0.1279    0.1221    0.5489    0.0407
+    0.2011    0.3782    0.6078   -0.5394   -0.0135    0.1064    0.2342    0.1459   -0.2618
+    0.3213    0.4964   -0.1796   -0.1047    0.0079   -0.0053   -0.3295   -0.7022    0.0740
+    0.1031    0.0275    0.1659    0.6053   -0.1171    0.4160    0.4302   -0.3100   -0.3560
+    0.1590    0.1282    0.2538    0.3810    0.2827   -0.7928    0.0151    0.0228   -0.1988
+    0.3944   -0.0560    0.4540    0.3302   -0.1951    0.2051   -0.4879    0.2414    0.3869
+    0.4900   -0.3555   -0.1909   -0.1093    0.5293    0.2243   -0.2283    0.1032   -0.4381
+    0.3828   -0.1655   -0.2502   -0.1018   -0.7534   -0.2627    0.0043    0.0943   -0.3278
+    0.4999   -0.2092   -0.0744   -0.1075    0.1219   -0.0966    0.5884   -0.0995    0.5558
+
+
+V_norm =
+
+  9×9 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> matrix
+
+    1.6335   -1.7627    1.0000   -0.3869   -0.0977   -0.1614   -0.2502   -0.7817   -0.0929
+    1.9506   -1.0639   -1.3737    1.0000    0.0179   -0.1342   -0.4801   -0.2077    0.5976
+    3.1168   -1.3962    0.4060    0.1941   -0.0105    0.0067    0.6753    1.0000   -0.1689
+    1.0000   -0.0773   -0.3750   -1.1223    0.1554   -0.5247   -0.8818    0.4414    0.8127
+    1.5422   -0.3607   -0.5737   -0.7064   -0.3752    1.0000   -0.0310   -0.0325    0.4538
+    3.8267    0.1575   -1.0260   -0.6121    0.2589   -0.2588    1.0000   -0.3438   -0.8833
+    4.7540    1.0000    0.4314    0.2026   -0.7025   -0.2829    0.4679   -0.1470    1.0000
+    3.7143    0.4656    0.5655    0.1888    1.0000    0.3314   -0.0088   -0.1342    0.7482
+    4.8495    0.5884    0.1681    0.1992   -0.1618    0.1219   -1.2060    0.1417   -1.2688
+
+Part 3 Values
+
+S =
+
+  9×9 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> matrix
+
+   1.0e+03 *
+
+    3.6726    0.5110    2.1887    0.3043    0.5569    0.5221    0.8432    1.1077    1.1248
+    0.5110    3.8449    1.4910    0.3265    0.9678    1.8129    0.9799    0.7803    1.4830
+    2.1887    1.4910    4.0326    0.4014    0.9264    1.9229    2.2882    2.0085    2.4174
+    0.3043    0.3265    0.4014    1.9335    0.8820    0.9947    0.6370    0.4982    0.8953
+    0.5569    0.9678    0.9264    0.8820    1.7316    1.6492    1.0286    0.7853    1.1327
+    0.5221    1.8129    1.9229    0.9947    1.6492    4.7529    3.2284    2.2420    3.2575
+    0.8432    0.9799    2.2882    0.6370    1.0286    3.2284    5.8348    3.8905    4.4829
+    1.1077    0.7803    2.0085    0.4982    0.7853    2.2420    3.8905    3.7344    3.5533
+    1.1248    1.4830    2.4174    0.8953    1.1327    3.2575    4.4829    3.5533    5.9452
+
+
+R =
+
+  9×9 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> matrix
+
+    1.0000    0.1360    0.5687    0.1142    0.2208    0.1250    0.1822    0.2991    0.2407
+    0.1360    1.0000    0.3787    0.1197    0.3751    0.4241    0.2069    0.2059    0.3102
+    0.5687    0.3787    1.0000    0.1438    0.3506    0.4392    0.4717    0.5176    0.4937
+    0.1142    0.1197    0.1438    1.0000    0.4820    0.3281    0.1897    0.1854    0.2641
+    0.2208    0.3751    0.3506    0.4820    1.0000    0.5749    0.3236    0.3088    0.3530
+    0.1250    0.4241    0.4392    0.3281    0.5749    1.0000    0.6131    0.5322    0.6128
+    0.1822    0.2069    0.4717    0.1897    0.3236    0.6131    1.0000    0.8335    0.7611
+    0.2991    0.2059    0.5176    0.1854    0.3088    0.5322    0.8335    1.0000    0.7541
+    0.2407    0.3102    0.4937    0.2641    0.3530    0.6128    0.7611    0.7541    1.0000
+
+{Error using publish
+The output file "G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW6\html\BE601HW6_Prob4.pdf" is not writable.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mdbpublish', 'C:\Program Files\MATLAB\R2018b\toolbox\matlab\codetools\mdbpublish.m', 55)" style="font-weight:bold">mdbpublish</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\matlab\codetools\mdbpublish.m',55,0)">line 55</a>)
+outputPath = publish(file, options);
+} 
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('open', 'C:\Program Files\MATLAB\R2018b\toolbox\matlab\general\open.m', 52)" style="font-weight:bold">open</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\matlab\general\open.m',52,0)">line 52</a>)
+NAME must be a character vector or string scalar.
+} 
+{Error using publish
+The output file "G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW6\html\BE601HW6_Prob4.pdf" is not writable.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mdbpublish', 'C:\Program Files\MATLAB\R2018b\toolbox\matlab\codetools\mdbpublish.m', 55)" style="font-weight:bold">mdbpublish</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\matlab\codetools\mdbpublish.m',55,0)">line 55</a>)
+outputPath = publish(file, options);
+} 
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('open', 'C:\Program Files\MATLAB\R2018b\toolbox\matlab\general\open.m', 52)" style="font-weight:bold">open</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\matlab\general\open.m',52,0)">line 52</a>)
+NAME must be a character vector or string scalar.
+} 
+BE601HW6_Prob3
+BE601HW6_Prob3
+
+lengdv =
+
+    'f1f2x0x1x2x3x4x5'
+
+BE601HW6_Prob3
+[Warning: Ignoring extra legend entries.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('legend>process_inputs', 'C:\Program Files\MATLAB\R2018b\toolbox\matlab\scribe\legend.p', 566)" style="font-weight:bold">legend>process_inputs</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\matlab\scribe\legend.p',566,0)">line 566</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('legend>make_legend', 'C:\Program Files\MATLAB\R2018b\toolbox\matlab\scribe\legend.p', 310)" style="font-weight:bold">legend>make_legend</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\matlab\scribe\legend.p',310,0)">line 310</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('legend', 'C:\Program Files\MATLAB\R2018b\toolbox\matlab\scribe\legend.p', 261)" style="font-weight:bold">legend</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\matlab\scribe\legend.p',261,0)">line 261</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BE601HW6_Prob3', 'G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW6\BE601HW6_Prob3.m', 59)" style="font-weight:bold">BE601HW6_Prob3</a> (<a href="matlab: opentoline('G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW6\BE601HW6_Prob3.m',59,0)">line 59</a>)] 
+
+lengdv =
+
+    'f1f2x0x1x2x3x4x5'
+
+BE601HW6_Prob3
+[Warning: Ignoring extra legend entries.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('legend>process_inputs', 'C:\Program Files\MATLAB\R2018b\toolbox\matlab\scribe\legend.p', 566)" style="font-weight:bold">legend>process_inputs</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\matlab\scribe\legend.p',566,0)">line 566</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('legend>make_legend', 'C:\Program Files\MATLAB\R2018b\toolbox\matlab\scribe\legend.p', 310)" style="font-weight:bold">legend>make_legend</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\matlab\scribe\legend.p',310,0)">line 310</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('legend', 'C:\Program Files\MATLAB\R2018b\toolbox\matlab\scribe\legend.p', 261)" style="font-weight:bold">legend</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\matlab\scribe\legend.p',261,0)">line 261</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BE601HW6_Prob3', 'G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW6\BE601HW6_Prob3.m', 59)" style="font-weight:bold">BE601HW6_Prob3</a> (<a href="matlab: opentoline('G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW6\BE601HW6_Prob3.m',59,0)">line 59</a>)] 
+[Warning: Ignoring extra legend entries.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('legend>process_inputs', 'C:\Program Files\MATLAB\R2018b\toolbox\matlab\scribe\legend.p', 566)" style="font-weight:bold">legend>process_inputs</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\matlab\scribe\legend.p',566,0)">line 566</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('legend>make_legend', 'C:\Program Files\MATLAB\R2018b\toolbox\matlab\scribe\legend.p', 310)" style="font-weight:bold">legend>make_legend</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\matlab\scribe\legend.p',310,0)">line 310</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('legend', 'C:\Program Files\MATLAB\R2018b\toolbox\matlab\scribe\legend.p', 261)" style="font-weight:bold">legend</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\matlab\scribe\legend.p',261,0)">line 261</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BE601HW6_Prob3', 'G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW6\BE601HW6_Prob3.m', 136)" style="font-weight:bold">BE601HW6_Prob3</a> (<a href="matlab: opentoline('G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW6\BE601HW6_Prob3.m',136,0)">line 136</a>)] 

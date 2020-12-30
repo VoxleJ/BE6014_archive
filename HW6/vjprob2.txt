@@ -1,0 +1,976 @@
+disp('Part 1')
+Part 1
+G
+
+G =
+
+  642.7496   86.4750
+   86.4750  115.0000
+
+b_new
+
+b_new =
+
+  224.4653
+   61.5112
+
+x_ster
+
+x_ster =
+
+    0.3085
+    0.3029
+
+
+data_ID(1)
+
+ans =
+
+     1
+
+data_ID(3)
+
+ans =
+
+     3
+
+data_ID(4)
+
+ans =
+
+     4
+
+data_ID(6)
+
+ans =
+
+     6
+
+data_ID(10)
+
+ans =
+
+    10
+
+
+Vmax
+
+Vmax =
+
+    3.3012
+
+Km
+
+Km =
+
+    1.0183
+
+
+disp('Part 2')
+Part 2
+
+zaxisaltot
+{Undefined function or variable 'zaxisaltot'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BE601HW6_Prob2', 'G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW6\BE601HW6_Prob2.m', 154)" style="font-weight:bold">BE601HW6_Prob2</a> (<a href="matlab: opentoline('G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW6\BE601HW6_Prob2.m',154,0)">line 154</a>)
+zaxisaltot
+} 
+opentoline('G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW6\BE601HW6_Prob2.m',154,0)
+BE601HW6_Prob2
+Part 1
+
+G =
+
+  642.7496   86.4750
+   86.4750  115.0000
+
+
+b_new =
+
+  224.4653
+   61.5112
+
+
+x_ster =
+
+    0.3085
+    0.3029
+
+
+ans =
+
+     1
+
+
+ans =
+
+     3
+
+
+ans =
+
+     4
+
+
+ans =
+
+     6
+
+
+ans =
+
+    10
+
+
+Vmax =
+
+    3.3012
+
+
+Km =
+
+    1.0183
+
+Part 2
+
+zaxisalttot =
+
+   1.0e+05 *
+
+    2.9383    2.9383
+
+
+xktot =
+
+    3.0000    0.3710
+    1.0000   -0.2086
+
+
+wktot =
+
+ -985.0231 -985.0231
+ -452.8390 -452.8390
+
+
+alphktot =
+
+    0.0027    0.0027
+
+
+Vmax_new =
+
+   -4.7936
+
+
+Km_new =
+
+    1.2248
+
+BE601HW6_Prob2
+disp('Part 1')
+Part 1
+G
+
+G =
+
+  642.7496   86.4750
+   86.4750  115.0000
+
+b_new
+
+b_new =
+
+  224.4653
+   61.5112
+
+x_ster
+
+x_ster =
+
+    0.3085
+    0.3029
+
+
+data_ID(1)
+
+ans =
+
+     1
+
+data_ID(3)
+
+ans =
+
+     3
+
+data_ID(4)
+
+ans =
+
+     4
+
+data_ID(6)
+
+ans =
+
+     6
+
+data_ID(10)
+
+ans =
+
+    10
+
+
+Vmax
+
+Vmax =
+
+    3.3012
+
+Km
+
+Km =
+
+    1.0183
+
+
+disp('Part 2')
+Part 2
+
+zaxisalttot
+
+zaxisalttot =
+
+   1.0e+05 *
+
+    2.9383    2.9383
+
+xktot
+
+xktot =
+
+    3.0000    0.3710
+    1.0000   -0.2086
+
+wktot
+
+wktot =
+
+ -985.0231 -985.0231
+ -452.8390 -452.8390
+
+alphktot
+
+alphktot =
+
+    0.0027    0.0027
+
+
+Vmax_new
+
+Vmax_new =
+
+   -4.7936
+
+Km_new
+
+Km_new =
+
+    1.2248
+
+
+echo off
+clear all
+clc
+BE601HW6_Prob2
+disp('Part 1')
+Part 1
+G
+
+G =
+
+  642.7496   86.4750
+   86.4750  115.0000
+
+b_new
+
+b_new =
+
+  224.4653
+   61.5112
+
+x_ster
+
+x_ster =
+
+    0.3085
+    0.3029
+
+
+data_ID(1)
+
+ans =
+
+     1
+
+data_ID(3)
+
+ans =
+
+     3
+
+data_ID(4)
+
+ans =
+
+     4
+
+data_ID(6)
+
+ans =
+
+     6
+
+data_ID(10)
+
+ans =
+
+    10
+
+
+Vmax
+
+Vmax =
+
+    3.3012
+
+Km
+
+Km =
+
+    1.0183
+
+
+disp('Part 2')
+Part 2
+
+zaxisalttot
+
+zaxisalttot =
+
+   1.0e+05 *
+
+    2.9383    2.9383
+
+xktot
+
+xktot =
+
+    3.0000    0.3710
+    1.0000   -0.2086
+
+wktot
+
+wktot =
+
+ -985.0231 -985.0231
+ -452.8390 -452.8390
+
+alphktot
+
+alphktot =
+
+    0.0027    0.0027
+
+
+Vmax_new
+
+Vmax_new =
+
+   -4.7936
+
+Km_new
+
+Km_new =
+
+    1.2248
+
+
+echo off
+h5 = scatter(t_new, y_new);
+BE601HW6_Prob2
+disp('Part 1')
+Part 1
+G
+
+G =
+
+  642.7496   86.4750
+   86.4750  115.0000
+
+b_new
+
+b_new =
+
+  224.4653
+   61.5112
+
+x_ster
+
+x_ster =
+
+    0.3085
+    0.3029
+
+
+data_ID(1)
+
+ans =
+
+     1
+
+data_ID(3)
+
+ans =
+
+     3
+
+data_ID(4)
+
+ans =
+
+     4
+
+data_ID(6)
+
+ans =
+
+     6
+
+data_ID(10)
+
+ans =
+
+    10
+
+
+Vmax
+
+Vmax =
+
+    3.3012
+
+Km
+
+Km =
+
+    1.0183
+
+
+disp('Part 2')
+Part 2
+
+zaxisalttot
+
+zaxisalttot =
+
+   1.0e+05 *
+
+    2.9383    2.9383
+
+xktot
+
+xktot =
+
+    3.0000    0.3710
+    1.0000   -0.2086
+
+wktot
+
+wktot =
+
+ -985.0231 -985.0231
+ -452.8390 -452.8390
+
+alphktot
+
+alphktot =
+
+    0.0027    0.0027
+
+
+Vmax_new
+
+Vmax_new =
+
+   -4.7936
+
+Km_new
+
+Km_new =
+
+    1.2248
+
+
+echo off
+BE601HW6_Prob2
+disp('Part 1')
+Part 1
+G
+
+G =
+
+  642.7496   86.4750
+   86.4750  115.0000
+
+b_new
+
+b_new =
+
+  224.4653
+   61.5112
+
+x_ster
+
+x_ster =
+
+    0.3085
+    0.3029
+
+
+data_ID(1)
+
+ans =
+
+     1
+
+data_ID(3)
+
+ans =
+
+     3
+
+data_ID(4)
+
+ans =
+
+     4
+
+data_ID(6)
+
+ans =
+
+     6
+
+data_ID(10)
+
+ans =
+
+    10
+
+
+Vmax
+
+Vmax =
+
+    3.3012
+
+Km
+
+Km =
+
+    1.0183
+
+
+disp('Part 2')
+Part 2
+
+zaxisalttot
+
+zaxisalttot =
+
+   1.0e+05 *
+
+    2.9383    2.9383
+
+xktot
+
+xktot =
+
+    3.0000    0.3710
+    1.0000   -0.2086
+
+wktot
+
+wktot =
+
+ -985.0231 -985.0231
+ -452.8390 -452.8390
+
+alphktot
+
+alphktot =
+
+    0.0027    0.0027
+
+
+Vmax_new
+
+Vmax_new =
+
+   -4.7936
+
+Km_new
+
+Km_new =
+
+    1.2248
+
+
+echo off
+BE601HW6_Prob2
+disp('Part 1')
+Part 1
+G
+
+G =
+
+  642.7496   86.4750
+   86.4750  115.0000
+
+b_new
+
+b_new =
+
+  224.4653
+   61.5112
+
+x_ster
+
+x_ster =
+
+    0.3085
+    0.3029
+
+
+data_ID(1)
+
+ans =
+
+     1
+
+data_ID(3)
+
+ans =
+
+     3
+
+data_ID(4)
+
+ans =
+
+     4
+
+data_ID(6)
+
+ans =
+
+     6
+
+data_ID(10)
+
+ans =
+
+    10
+
+
+Vmax
+
+Vmax =
+
+    3.3012
+
+Km
+
+Km =
+
+    1.0183
+
+
+disp('Part 2')
+Part 2
+
+zaxisalttot
+
+zaxisalttot =
+
+   1.0e+05 *
+
+    2.9383    2.9383
+
+xktot
+
+xktot =
+
+    3.0000    0.3710
+    1.0000   -0.2086
+
+wktot
+
+wktot =
+
+ -985.0231 -985.0231
+ -452.8390 -452.8390
+
+alphktot
+
+alphktot =
+
+    0.0027    0.0027
+
+
+Vmax_new
+
+Vmax_new =
+
+   -4.7936
+
+Km_new
+
+Km_new =
+
+    1.2248
+
+
+echo off
+BE601HW6_Prob2
+disp('Part 1')
+Part 1
+G
+
+G =
+
+  642.7496   86.4750
+   86.4750  115.0000
+
+b_new
+
+b_new =
+
+  224.4653
+   61.5112
+
+x_ster
+
+x_ster =
+
+    0.3085
+    0.3029
+
+
+data_ID(1)
+
+ans =
+
+     1
+
+data_ID(3)
+
+ans =
+
+     3
+
+data_ID(4)
+
+ans =
+
+     4
+
+data_ID(6)
+
+ans =
+
+     6
+
+data_ID(10)
+
+ans =
+
+    10
+
+
+Vmax
+
+Vmax =
+
+    3.3012
+
+Km
+
+Km =
+
+    1.0183
+
+
+disp('Part 2')
+Part 2
+
+zaxisalttot
+
+zaxisalttot =
+
+   1.0e+05 *
+
+    2.9383    2.9383
+
+xktot
+
+xktot =
+
+    3.0000    0.3710
+    1.0000   -0.2086
+
+wktot
+
+wktot =
+
+ -985.0231 -985.0231
+ -452.8390 -452.8390
+
+alphktot
+
+alphktot =
+
+    0.0027    0.0027
+
+
+Vmax_new
+
+Vmax_new =
+
+   -4.7936
+
+Km_new
+
+Km_new =
+
+    1.2248
+
+
+echo off
+BE601HW6_Prob2
+disp('Part 1')
+Part 1
+G
+
+G =
+
+  642.7496   86.4750
+   86.4750  115.0000
+
+b_new
+
+b_new =
+
+  224.4653
+   61.5112
+
+x_ster
+
+x_ster =
+
+    0.3085
+    0.3029
+
+
+data_ID(1)
+
+ans =
+
+     1
+
+data_ID(3)
+
+ans =
+
+     3
+
+data_ID(4)
+
+ans =
+
+     4
+
+data_ID(6)
+
+ans =
+
+     6
+
+data_ID(10)
+
+ans =
+
+    10
+
+
+Vmax
+
+Vmax =
+
+    3.3012
+
+Km
+
+Km =
+
+    1.0183
+
+
+disp('Part 2')
+Part 2
+
+zaxisalttot
+
+zaxisalttot =
+
+   1.0e+05 *
+
+    2.9383    2.9383
+
+xktot
+
+xktot =
+
+    3.0000    0.3710
+    1.0000   -0.2086
+
+wktot
+
+wktot =
+
+ -985.0231 -985.0231
+ -452.8390 -452.8390
+
+alphktot
+
+alphktot =
+
+    0.0027    0.0027
+
+
+Vmax_new
+
+Vmax_new =
+
+   -4.7936
+
+Km_new
+
+Km_new =
+
+    1.2248
+
+
+echo off
