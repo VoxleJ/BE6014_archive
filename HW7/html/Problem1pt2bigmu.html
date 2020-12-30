@@ -1,0 +1,1478 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Problem1pt2bigmu</title><meta name="generator" content="MATLAB 9.5"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2020-12-11"><meta name="DC.source" content="Problem1pt2bigmu.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#1">Problem 1 part 2 mu 1e+05</a></li><li><a href="#2">mu 1e+05</a></li><li><a href="#3">Iteration 2</a></li><li><a href="#4">Iteration 3</a></li><li><a href="#5">Iteration 4</a></li><li><a href="#6">Iteration 5</a></li><li><a href="#7">Iteration 6</a></li><li><a href="#8">Iteration 7</a></li><li><a href="#9">Iteration 8</a></li><li><a href="#10">Iteration 9</a></li><li><a href="#11">Iteration 10</a></li><li><a href="#12">Echoing outputs for diary</a></li></ul></div><h2 id="1">Problem 1 part 2 mu 1e+05</h2><pre class="codeinput">clear <span class="string">all</span>
+close <span class="string">all</span>
+
+[t, y] = textread(<span class="string">'Problem1_TExpo_sineData.txt'</span>,<span class="string">'%f%f'</span>,<span class="string">'headerlines'</span>,1);
+
+alpha = -0.4;
+omega = 0.5;
+xk = [alpha omega]';
+
+J1 = t.^3 .* exp(alpha .* t) .* sin(omega .* t);
+J2 = t.^2 .* exp(alpha .* t) .* cos(omega .* t);
+
+
+J = [J1 J2];
+
+model = t .* (exp(alpha .* t)) .* (sin(omega) .* t);
+
+residual = y - model;
+
+r2 = residual' * residual;
+
+
+mu_start = 1e+05;
+mu_down = 50;
+mu_up = 5;
+
+<span class="comment">% mu_rscout = mu_old * mu_up;</span>
+<span class="comment">% mu_cont = mu_old/mu_down;</span>
+
+mmax = 5;
+
+deltax = inv(J'*J + mu_start.*[1 0; 0 1]) *J' * residual ;
+x0 = xk - deltax ;
+
+
+model2 = t .* (exp(x0(1) .* t)) .* (sin(x0(2)) .* t);
+residual2 = y - model2;
+
+r22 = residual2' * residual2;
+r22 &lt; r2
+
+alphatot = [xk(1) x0(1)];
+omegatot = [xk(2) x0(2)];
+
+<span class="comment">%Iteration 0 values</span>
+
+mu = 0.1/50;
+mtot = [1];
+mutot = [mu_start mu];
+rtotv = [r2 r22];
+</pre><pre class="codeoutput">
+ans =
+
+  logical
+
+   1
+
+</pre><h2 id="2">mu 1e+05</h2><pre class="codeinput">disp(<span class="string">'Conservative mu 1e+05'</span>)
+alpha = -0.4;
+omega = 0.5;
+xk = [alpha omega]';
+
+J1 = t.^3 .* exp(alpha .* t) .* sin(omega .* t);
+J2 = t.^2 .* exp(alpha .* t) .* cos(omega .* t);
+
+
+J = [J1 J2];
+
+model = t .* (exp(alpha .* t)) .* (sin(omega) .* t);
+
+residual = y - model;
+
+r2 = residual' * residual;
+
+
+mu_start = 1e+05;
+mu_down = 50;
+mu_up = 5;
+
+<span class="comment">% mu_rscout = mu_old * mu_up;</span>
+<span class="comment">% mu_cont = mu_old/mu_down;</span>
+
+mmax = 5;
+
+deltax = inv(J'*J + mu_start.*[1 0; 0 1]) *J' * residual ;
+x0 = xk - deltax ;
+
+
+model2 = t .* (exp(x0(1) .* t)) .* (sin(x0(2)) .* t);
+residual2 = y - model2;
+
+r22 = residual2' * residual2;
+r22 &lt; r2
+
+alphatot = [xk(1) x0(1)];
+omegatot = [xk(2) x0(2)];
+
+
+mu = 0.1/50;
+</pre><pre class="codeoutput">Conservative mu 1e+05
+
+ans =
+
+  logical
+
+   1
+
+</pre><h2 id="3">Iteration 2</h2><pre class="codeinput">r2_it = 1000000000000000;
+r2_baseline = r22;
+m = 1;
+<span class="keyword">while</span> r2_it &gt; r2_baseline
+
+
+    Ja1 = t.^3 .* exp(alphatot(2) .* t) .* sin(omegatot(2) .* t);
+    Ja2 = t.^2 .* exp(alphatot(2) .* t) .* cos(omegatot(2) .* t);
+    Ja = [Ja1 Ja2];
+
+    deltaxa = inv(J'*J + mu.*[1 0; 0 1]) *J' * residual2;
+
+    x1a = x0 - deltaxa;
+
+    model3a = t .* (exp(x1a(1) .* t)) .* (sin(x1a(2)) .* t);
+
+    residual3a = y - model3a;
+
+    r2_it = residual3a' * residual3a;
+
+
+
+
+    <span class="keyword">if</span> r2_it &gt; r2_baseline
+        mu = mu * mu_up;
+    <span class="keyword">end</span>
+     m = m+1
+<span class="keyword">end</span>
+    alphatota = [alphatot x1a(1)];
+    omegatota = [omegatot x1a(2)];
+
+<span class="keyword">if</span> r2_it &lt; r2_baseline
+    mu = mu/mu_down;
+<span class="keyword">else</span>
+    mu = mu;
+<span class="keyword">end</span>
+
+mutot = [mutot mu];
+mtot = [mtot m];
+rtotv = [rtotv r2_it];
+disp(<span class="string">'Iteration 2'</span>)
+m
+mu
+r2_it
+disp(<span class="string">'Next Iteration'</span>)
+</pre><pre class="codeoutput">
+m =
+
+     2
+
+Iteration 2
+
+m =
+
+     2
+
+
+mu =
+
+   4.0000e-05
+
+
+r2_it =
+
+   79.9736
+
+Next Iteration
+</pre><h2 id="4">Iteration 3</h2><pre class="codeinput">r3_it = 1000000000000000;
+r2_baseline = r2_it;
+m = 1;
+
+<span class="keyword">while</span> r3_it &gt; r2_baseline || m == 5
+
+
+    Ja1 = t.^3 .* exp(alphatota(3) .* t) .* sin(omegatota(3) .* t);
+    Ja2 = t.^2 .* exp(alphatota(3) .* t) .* cos(omegatota(3) .* t);
+    Ja = [Ja1 Ja2];
+
+    deltaxa = inv(J'*J + mu.*[1 0; 0 1]) *J' * residual3a;
+
+    x2a = x1a - deltaxa;
+
+    model4a = t .* (exp(x2a(1) .* t)) .* (sin(x2a(2)) .* t);
+
+    residual4a = y - model4a;
+
+    r3_it = residual4a' * residual4a;
+
+
+
+    <span class="keyword">if</span> r3_it &gt; r2_baseline
+        mu = mu * mu_up;
+    <span class="keyword">end</span>
+     m = m+1
+<span class="keyword">end</span>
+    alphatota = [alphatota x2a(1)];
+    omegatota = [omegatota x2a(2)];
+
+<span class="keyword">if</span> r3_it &lt; r2_baseline
+    mu = mu/mu_down;
+<span class="keyword">else</span>
+    mu = mu;
+<span class="keyword">end</span>
+
+mutot = [mutot mu];
+mtot = [mtot m];
+rtotv = [rtotv r3_it];
+disp(<span class="string">'Iteration 3'</span>)
+m
+mu
+r3_it
+disp(<span class="string">'Next Iteration'</span>)
+</pre><pre class="codeoutput">
+m =
+
+     2
+
+Iteration 3
+
+m =
+
+     2
+
+
+mu =
+
+   8.0000e-07
+
+
+r3_it =
+
+   64.3358
+
+Next Iteration
+</pre><h2 id="5">Iteration 4</h2><pre class="codeinput">r4_it = 1000000000000000;
+r3_baseline = r3_it;
+m = 1;
+
+<span class="keyword">while</span> r4_it &gt; r3_baseline
+
+
+    Ja1 = t.^3 .* exp(alphatota(4) .* t) .* sin(omegatota(4) .* t);
+    Ja2 = t.^2 .* exp(alphatota(4) .* t) .* cos(omegatota(4) .* t);
+    Ja = [Ja1 Ja2];
+
+    deltaxa = inv(J'*J + mu.*[1 0; 0 1]) *J' * residual4a;
+
+    x3a = x2a - deltaxa;
+
+    model5a = t .* (exp(x3a(1) .* t)) .* (sin(x3a(2)) .* t);
+
+    residual5a = y - model5a;
+
+    r4_it = residual5a' * residual5a;
+
+
+
+    <span class="keyword">if</span> r4_it &gt; r3_baseline
+        mu = mu * mu_up;
+    <span class="keyword">end</span>
+
+     m = m+1
+    <span class="keyword">if</span> m == 5
+        <span class="keyword">break</span>
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+    alphatota = [alphatota x3a(1)];
+    omegatota = [omegatota x3a(2)];
+
+<span class="keyword">if</span> r4_it &lt; r3_baseline
+    mu = mu/mu_down;
+<span class="keyword">else</span>
+    mu = mu;
+<span class="keyword">end</span>
+
+mutot = [mutot mu];
+mtot = [mtot m];
+rtotv = [rtotv r4_it];
+disp(<span class="string">'Iteration 4'</span>)
+m
+mu
+r4_it
+disp(<span class="string">'Next Iteration'</span>)
+</pre><pre class="codeoutput">
+m =
+
+     2
+
+Iteration 4
+
+m =
+
+     2
+
+
+mu =
+
+   1.6000e-08
+
+
+r4_it =
+
+   62.9533
+
+Next Iteration
+</pre><h2 id="6">Iteration 5</h2><pre class="codeinput">r5_it = 1000000000000000;
+r4_baseline = r4_it;
+m = 1;
+
+<span class="keyword">while</span> r5_it &gt; r4_baseline
+
+
+    Ja1 = t.^3 .* exp(alphatota(5) .* t) .* sin(omegatota(5) .* t);
+    Ja2 = t.^2 .* exp(alphatota(5) .* t) .* cos(omegatota(5) .* t);
+    Ja = [Ja1 Ja2];
+
+    deltaxa = inv(J'*J + mu.*[1 0; 0 1]) *J' * residual5a;
+
+    x4a = x3a - deltaxa;
+
+    model6a = t .* (exp(x4a(1) .* t)) .* (sin(x4a(2)) .* t);
+
+    residual6a = y - model6a;
+
+    r5_it = residual6a' * residual6a;
+
+
+
+    <span class="keyword">if</span> r5_it &gt; r4_baseline
+        mu = mu * mu_up;
+    <span class="keyword">end</span>
+
+     m = m+1
+    <span class="keyword">if</span> m == 5
+        <span class="keyword">break</span>
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+    alphatota = [alphatota x4a(1)];
+    omegatota = [omegatota x4a(2)];
+
+<span class="keyword">if</span> r5_it &lt; r4_baseline
+    mu = mu/mu_down;
+<span class="keyword">else</span>
+    mu = mu;
+<span class="keyword">end</span>
+
+mutot = [mutot mu];
+mtot = [mtot m];
+rtotv = [rtotv r5_it];
+disp(<span class="string">'Iteration 5'</span>)
+m
+mu
+r5_it
+disp(<span class="string">'Next Iteration'</span>)
+</pre><pre class="codeoutput">
+m =
+
+     2
+
+Iteration 5
+
+m =
+
+     2
+
+
+mu =
+
+   3.2000e-10
+
+
+r5_it =
+
+   62.7534
+
+Next Iteration
+</pre><h2 id="7">Iteration 6</h2><pre class="codeinput">r6_it = 1000000000000000;
+r5_baseline = r5_it;
+m = 1;
+
+<span class="keyword">while</span> r6_it &gt; r5_baseline
+
+
+    Ja1 = t.^3 .* exp(alphatota(6) .* t) .* sin(omegatota(6) .* t);
+    Ja2 = t.^2 .* exp(alphatota(6) .* t) .* cos(omegatota(6) .* t);
+    Ja = [Ja1 Ja2];
+
+    deltaxa = inv(J'*J + mu.*[1 0; 0 1]) *J' * residual6a;
+
+    x5a = x4a - deltaxa;
+
+    model7a = t .* (exp(x5a(1) .* t)) .* (sin(x5a(2)) .* t);
+
+    residual7a = y - model7a;
+
+    r6_it = residual7a' * residual7a;
+
+
+
+    <span class="keyword">if</span> r6_it &gt; r5_baseline
+        mu = mu * mu_up;
+    <span class="keyword">end</span>
+
+     m = m+1
+    <span class="keyword">if</span> m == 5
+        <span class="keyword">break</span>
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+    alphatota = [alphatota x5a(1)];
+    omegatota = [omegatota x5a(2)];
+
+<span class="keyword">if</span> r6_it &lt; r5_baseline
+    mu = mu/mu_down;
+<span class="keyword">else</span>
+    mu = mu;
+<span class="keyword">end</span>
+
+mutot = [mutot mu];
+mtot = [mtot m];
+rtotv = [rtotv r6_it];
+disp(<span class="string">'Iteration 6'</span>)
+m
+mu
+r6_it
+disp(<span class="string">'Next Iteration'</span>)
+</pre><pre class="codeoutput">
+m =
+
+     2
+
+Iteration 6
+
+m =
+
+     2
+
+
+mu =
+
+   6.4000e-12
+
+
+r6_it =
+
+   62.7184
+
+Next Iteration
+</pre><h2 id="8">Iteration 7</h2><pre class="codeinput">r7_it = 1000000000000000;
+r6_baseline = r6_it;
+m = 1;
+
+<span class="keyword">while</span> r7_it &gt; r6_baseline
+
+
+    Ja1 = t.^3 .* exp(alphatota(7) .* t) .* sin(omegatota(7) .* t);
+    Ja2 = t.^2 .* exp(alphatota(7) .* t) .* cos(omegatota(7) .* t);
+    Ja = [Ja1 Ja2];
+
+    deltaxa = inv(J'*J + mu.*[1 0; 0 1]) *J' * residual7a;
+
+    x6a = x5a - deltaxa;
+
+    model8a = t .* (exp(x6a(1) .* t)) .* (sin(x6a(2)) .* t);
+
+    residual8a = y - model8a;
+
+    r7_it = residual8a' * residual8a;
+
+
+
+    <span class="keyword">if</span> r7_it &gt; r6_baseline
+        mu = mu * mu_up;
+    <span class="keyword">end</span>
+
+     m = m+1
+    <span class="keyword">if</span> m == 5
+        <span class="keyword">break</span>
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+    alphatota = [alphatota x6a(1)];
+    omegatota = [omegatota x6a(2)];
+
+<span class="keyword">if</span> r7_it &lt; r6_baseline
+    mu = mu/mu_down;
+<span class="keyword">else</span>
+    mu = mu;
+<span class="keyword">end</span>
+
+mutot = [mutot mu];
+mtot = [mtot m];
+rtotv = [rtotv r7_it];
+disp(<span class="string">'Iteration 7'</span>)
+m
+mu
+r7_it
+disp(<span class="string">'Next Iteration'</span>)
+</pre><pre class="codeoutput">
+m =
+
+     2
+
+Iteration 7
+
+m =
+
+     2
+
+
+mu =
+
+   1.2800e-13
+
+
+r7_it =
+
+   62.7103
+
+Next Iteration
+</pre><h2 id="9">Iteration 8</h2><pre class="codeinput">r8_it = 1000000000000000;
+r7_baseline = r7_it;
+m = 1;
+
+<span class="keyword">while</span> r8_it &gt; r7_baseline
+
+
+    Ja1 = t.^3 .* exp(alphatota(8) .* t) .* sin(omegatota(8) .* t);
+    Ja2 = t.^2 .* exp(alphatota(8) .* t) .* cos(omegatota(8) .* t);
+    Ja = [Ja1 Ja2];
+
+    deltaxa = inv(J'*J + mu.*[1 0; 0 1]) *J' * residual8a;
+
+    x7a = x6a - deltaxa;
+
+    model9a = t .* (exp(x7a(1) .* t)) .* (sin(x7a(2)) .* t);
+
+    residual9a = y - model9a;
+
+    r8_it = residual9a' * residual9a;
+
+
+
+    <span class="keyword">if</span> r8_it &gt; r7_baseline
+        mu = mu * mu_up;
+    <span class="keyword">end</span>
+
+     m = m+1
+    <span class="keyword">if</span> m == 5
+        <span class="keyword">break</span>
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+    alphatota = [alphatota x7a(1)];
+    omegatota = [omegatota x7a(2)];
+
+<span class="keyword">if</span> r8_it &lt; r7_baseline
+    mu = mu/mu_down;
+<span class="keyword">else</span>
+    mu = mu;
+<span class="keyword">end</span>
+
+mutot = [mutot mu];
+mtot = [mtot m];
+rtotv = [rtotv r8_it];
+disp(<span class="string">'Iteration 8'</span>)
+m
+mu
+r8_it
+disp(<span class="string">'Next Iteration'</span>)
+</pre><pre class="codeoutput">
+m =
+
+     2
+
+Iteration 8
+
+m =
+
+     2
+
+
+mu =
+
+   2.5600e-15
+
+
+r8_it =
+
+   62.7063
+
+Next Iteration
+</pre><h2 id="10">Iteration 9</h2><pre class="codeinput">r9_it = 1000000000000000;
+r8_baseline = r8_it;
+m = 1;
+
+<span class="keyword">while</span> r9_it &gt; r8_baseline
+
+
+    Ja1 = t.^3 .* exp(alphatota(9) .* t) .* sin(omegatota(9) .* t);
+    Ja2 = t.^2 .* exp(alphatota(9) .* t) .* cos(omegatota(9) .* t);
+    Ja = [Ja1 Ja2];
+
+    deltaxa = inv(J'*J + mu.*[1 0; 0 1]) *J' * residual9a;
+
+    x8a = x7a - deltaxa;
+
+    model10a = t .* (exp(x8a(1) .* t)) .* (sin(x8a(2)) .* t);
+
+    residual10a = y - model10a;
+
+    r9_it = residual10a' * residual10a;
+
+
+
+    <span class="keyword">if</span> r9_it &gt; r8_baseline
+        mu = mu * mu_up;
+    <span class="keyword">end</span>
+
+     m = m+1
+    <span class="keyword">if</span> m == 5
+        <span class="keyword">break</span>
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+    alphatota = [alphatota x8a(1)];
+    omegatota = [omegatota x8a(2)];
+
+<span class="keyword">if</span> r9_it &lt; r8_baseline
+    mu = mu/mu_down;
+<span class="keyword">else</span>
+    mu = mu;
+<span class="keyword">end</span>
+
+mutot = [mutot mu];
+mtot = [mtot m];
+rtotv = [rtotv r9_it];
+disp(<span class="string">'Iteration 9'</span>)
+m
+mu
+r9_it
+disp(<span class="string">'Next Iteration'</span>)
+</pre><pre class="codeoutput">
+m =
+
+     2
+
+Iteration 9
+
+m =
+
+     2
+
+
+mu =
+
+   5.1200e-17
+
+
+r9_it =
+
+   62.7030
+
+Next Iteration
+</pre><h2 id="11">Iteration 10</h2><pre class="codeinput">r10_it = 1000000000000000000;
+r9_baseline = r9_it;
+m = 1;
+
+<span class="keyword">while</span> r10_it &gt; r9_baseline
+
+
+    Ja1 = t.^3 .* exp(alphatota(10) .* t) .* sin(omegatota(10) .* t);
+    Ja2 = t.^2 .* exp(alphatota(10) .* t) .* cos(omegatota(10) .* t);
+    Ja = [Ja1 Ja2];
+
+    deltaxa = inv(J'*J + mu.*[1 0; 0 1]) *J' * residual10a;
+
+    x9a = x8a - deltaxa;
+
+    model11a = t .* (exp(x8a(1) .* t)) .* (sin(x8a(2)) .* t);
+
+    residual11a = y - model11a;
+
+    r10_it = residual11a' * residual11a;
+
+
+
+    <span class="keyword">if</span> r10_it &gt; r9_baseline
+        mu = mu * mu_up;
+    <span class="keyword">end</span>
+
+     m = m+1
+    <span class="keyword">if</span> m == 5
+        <span class="keyword">break</span>
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+    alphatota = [alphatota x9a(1)];
+    omegatota = [omegatota x9a(2)];
+
+<span class="keyword">if</span> r10_it &lt; r9_baseline
+    mu = mu/mu_down;
+<span class="keyword">else</span>
+    mu = mu;
+<span class="keyword">end</span>
+
+mutot = [mutot mu];
+mtot = [mtot m];
+rtotv = [rtotv r10_it];
+disp(<span class="string">'Iteration 10'</span>)
+m
+mu
+r10_it
+disp(<span class="string">'Next Iteration'</span>)
+
+<span class="comment">% disp('Required 10 iterations to find final values')</span>
+
+f2 = figure(<span class="string">'Name'</span>, <span class="string">'Part 2 Plot over scatter, mu = 1e+05, regular hikes'</span>);
+
+scatter(t,y)
+hold <span class="string">on</span>
+plot(t, model10a)
+title(<span class="string">'Raw Data and Fit Part 2, \mu = 1e+05, regular hikes'</span>)
+xlabel(<span class="string">'time'</span>)
+ylabel(<span class="string">'displacement'</span>)
+</pre><pre class="codeoutput">
+m =
+
+     2
+
+Iteration 10
+
+m =
+
+     2
+
+
+mu =
+
+   5.1200e-17
+
+
+r10_it =
+
+   62.7030
+
+Next Iteration
+</pre><img vspace="5" hspace="5" src="Problem1pt2bigmu_01.png" alt=""> <h2 id="12">Echoing outputs for diary</h2><pre class="codeinput">diary <span class="string">vjprob1pt2_groupC.txt</span>
+
+echo <span class="string">on</span>
+
+mutot
+mtot
+rtotv
+alphatota
+omegatota
+
+echo <span class="string">off</span>
+</pre><pre class="codeoutput">
+mutot
+
+mutot =
+
+   1.0e+05 *
+
+  Columns 1 through 7
+
+    1.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
+
+  Columns 8 through 11
+
+    0.0000    0.0000    0.0000    0.0000
+
+mtot
+
+mtot =
+
+     1     2     2     2     2     2     2     2     2     2
+
+rtotv
+
+rtotv =
+
+  Columns 1 through 7
+
+  421.8764  412.2513   79.9736   64.3358   62.9533   62.7534   62.7184
+
+  Columns 8 through 11
+
+   62.7103   62.7063   62.7030   62.7030
+
+alphatota
+
+alphatota =
+
+  Columns 1 through 7
+
+   -0.4000   -0.4014   -0.4095   -0.4073   -0.4034   -0.3992   -0.3949
+
+  Columns 8 through 11
+
+   -0.3906   -0.3863   -0.3821   -0.3778
+
+omegatota
+
+omegatota =
+
+  Columns 1 through 7
+
+    0.5000    0.4972    0.1000    0.0249    0.0099    0.0070    0.0064
+
+  Columns 8 through 11
+
+    0.0062    0.0060    0.0059    0.0057
+
+
+echo off
+</pre><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Problem 1 part 2 mu 1e+05
+clear all 
+close all
+
+[t, y] = textread('Problem1_TExpo_sineData.txt','%f%f','headerlines',1);
+
+alpha = -0.4;
+omega = 0.5;
+xk = [alpha omega]';
+
+J1 = t.^3 .* exp(alpha .* t) .* sin(omega .* t);
+J2 = t.^2 .* exp(alpha .* t) .* cos(omega .* t);
+
+
+J = [J1 J2];
+
+model = t .* (exp(alpha .* t)) .* (sin(omega) .* t);
+
+residual = y - model;
+
+r2 = residual' * residual;
+
+
+mu_start = 1e+05;
+mu_down = 50;
+mu_up = 5;
+
+% mu_rscout = mu_old * mu_up;
+% mu_cont = mu_old/mu_down;
+
+mmax = 5;
+
+deltax = inv(J'*J + mu_start.*[1 0; 0 1]) *J' * residual ;
+x0 = xk - deltax ;
+
+
+model2 = t .* (exp(x0(1) .* t)) .* (sin(x0(2)) .* t);
+residual2 = y - model2;
+
+r22 = residual2' * residual2;
+r22 < r2
+
+alphatot = [xk(1) x0(1)];
+omegatot = [xk(2) x0(2)];
+
+%Iteration 0 values
+
+mu = 0.1/50;
+mtot = [1];
+mutot = [mu_start mu];
+rtotv = [r2 r22];
+
+%% mu 1e+05
+disp('Conservative mu 1e+05')
+alpha = -0.4;
+omega = 0.5;
+xk = [alpha omega]';
+
+J1 = t.^3 .* exp(alpha .* t) .* sin(omega .* t);
+J2 = t.^2 .* exp(alpha .* t) .* cos(omega .* t);
+
+
+J = [J1 J2];
+
+model = t .* (exp(alpha .* t)) .* (sin(omega) .* t);
+
+residual = y - model;
+
+r2 = residual' * residual;
+
+
+mu_start = 1e+05;
+mu_down = 50;
+mu_up = 5;
+
+% mu_rscout = mu_old * mu_up;
+% mu_cont = mu_old/mu_down;
+
+mmax = 5;
+
+deltax = inv(J'*J + mu_start.*[1 0; 0 1]) *J' * residual ;
+x0 = xk - deltax ;
+
+
+model2 = t .* (exp(x0(1) .* t)) .* (sin(x0(2)) .* t);
+residual2 = y - model2;
+
+r22 = residual2' * residual2;
+r22 < r2
+
+alphatot = [xk(1) x0(1)];
+omegatot = [xk(2) x0(2)];
+
+
+mu = 0.1/50;
+
+
+%% Iteration 2
+r2_it = 1000000000000000;
+r2_baseline = r22;
+m = 1;
+while r2_it > r2_baseline
+    
+    
+    Ja1 = t.^3 .* exp(alphatot(2) .* t) .* sin(omegatot(2) .* t);
+    Ja2 = t.^2 .* exp(alphatot(2) .* t) .* cos(omegatot(2) .* t);
+    Ja = [Ja1 Ja2];
+      
+    deltaxa = inv(J'*J + mu.*[1 0; 0 1]) *J' * residual2;
+
+    x1a = x0 - deltaxa;
+    
+    model3a = t .* (exp(x1a(1) .* t)) .* (sin(x1a(2)) .* t);
+    
+    residual3a = y - model3a;
+
+    r2_it = residual3a' * residual3a;
+   
+    
+   
+    
+    if r2_it > r2_baseline
+        mu = mu * mu_up;
+    end
+     m = m+1
+end
+    alphatota = [alphatot x1a(1)];
+    omegatota = [omegatot x1a(2)];
+    
+if r2_it < r2_baseline
+    mu = mu/mu_down;
+else
+    mu = mu;
+end
+
+mutot = [mutot mu];
+mtot = [mtot m];
+rtotv = [rtotv r2_it];
+disp('Iteration 2')
+m
+mu
+r2_it
+disp('Next Iteration')
+
+%% Iteration 3
+    
+r3_it = 1000000000000000;
+r2_baseline = r2_it;
+m = 1;
+
+while r3_it > r2_baseline || m == 5
+    
+    
+    Ja1 = t.^3 .* exp(alphatota(3) .* t) .* sin(omegatota(3) .* t);
+    Ja2 = t.^2 .* exp(alphatota(3) .* t) .* cos(omegatota(3) .* t);
+    Ja = [Ja1 Ja2];
+      
+    deltaxa = inv(J'*J + mu.*[1 0; 0 1]) *J' * residual3a;
+
+    x2a = x1a - deltaxa;
+    
+    model4a = t .* (exp(x2a(1) .* t)) .* (sin(x2a(2)) .* t);
+    
+    residual4a = y - model4a;
+
+    r3_it = residual4a' * residual4a; 
+    
+   
+    
+    if r3_it > r2_baseline
+        mu = mu * mu_up;
+    end
+     m = m+1
+end
+    alphatota = [alphatota x2a(1)];
+    omegatota = [omegatota x2a(2)];
+    
+if r3_it < r2_baseline
+    mu = mu/mu_down;
+else
+    mu = mu;
+end
+
+mutot = [mutot mu];
+mtot = [mtot m];
+rtotv = [rtotv r3_it];
+disp('Iteration 3')
+m
+mu
+r3_it
+disp('Next Iteration')
+
+%% Iteration 4
+    
+r4_it = 1000000000000000;
+r3_baseline = r3_it;
+m = 1;
+
+while r4_it > r3_baseline
+    
+    
+    Ja1 = t.^3 .* exp(alphatota(4) .* t) .* sin(omegatota(4) .* t);
+    Ja2 = t.^2 .* exp(alphatota(4) .* t) .* cos(omegatota(4) .* t);
+    Ja = [Ja1 Ja2];
+      
+    deltaxa = inv(J'*J + mu.*[1 0; 0 1]) *J' * residual4a;
+
+    x3a = x2a - deltaxa;
+    
+    model5a = t .* (exp(x3a(1) .* t)) .* (sin(x3a(2)) .* t);
+    
+    residual5a = y - model5a;
+
+    r4_it = residual5a' * residual5a; 
+    
+   
+    
+    if r4_it > r3_baseline
+        mu = mu * mu_up;
+    end
+    
+     m = m+1
+    if m == 5
+        break
+    end
+end
+    alphatota = [alphatota x3a(1)];
+    omegatota = [omegatota x3a(2)];
+    
+if r4_it < r3_baseline
+    mu = mu/mu_down;
+else
+    mu = mu;
+end
+
+mutot = [mutot mu];
+mtot = [mtot m];
+rtotv = [rtotv r4_it];
+disp('Iteration 4')
+m
+mu
+r4_it
+disp('Next Iteration')
+
+
+%% Iteration 5
+
+
+r5_it = 1000000000000000;
+r4_baseline = r4_it;
+m = 1;
+
+while r5_it > r4_baseline
+    
+    
+    Ja1 = t.^3 .* exp(alphatota(5) .* t) .* sin(omegatota(5) .* t);
+    Ja2 = t.^2 .* exp(alphatota(5) .* t) .* cos(omegatota(5) .* t);
+    Ja = [Ja1 Ja2];
+      
+    deltaxa = inv(J'*J + mu.*[1 0; 0 1]) *J' * residual5a;
+
+    x4a = x3a - deltaxa;
+    
+    model6a = t .* (exp(x4a(1) .* t)) .* (sin(x4a(2)) .* t);
+    
+    residual6a = y - model6a;
+
+    r5_it = residual6a' * residual6a; 
+    
+   
+    
+    if r5_it > r4_baseline
+        mu = mu * mu_up;
+    end
+    
+     m = m+1
+    if m == 5
+        break
+    end
+end
+    alphatota = [alphatota x4a(1)];
+    omegatota = [omegatota x4a(2)];
+    
+if r5_it < r4_baseline
+    mu = mu/mu_down;
+else
+    mu = mu;
+end
+
+mutot = [mutot mu];
+mtot = [mtot m];
+rtotv = [rtotv r5_it];
+disp('Iteration 5')
+m
+mu
+r5_it
+disp('Next Iteration')
+
+%% Iteration 6
+
+
+r6_it = 1000000000000000;
+r5_baseline = r5_it;
+m = 1;
+
+while r6_it > r5_baseline
+    
+    
+    Ja1 = t.^3 .* exp(alphatota(6) .* t) .* sin(omegatota(6) .* t);
+    Ja2 = t.^2 .* exp(alphatota(6) .* t) .* cos(omegatota(6) .* t);
+    Ja = [Ja1 Ja2];
+      
+    deltaxa = inv(J'*J + mu.*[1 0; 0 1]) *J' * residual6a;
+
+    x5a = x4a - deltaxa;
+    
+    model7a = t .* (exp(x5a(1) .* t)) .* (sin(x5a(2)) .* t);
+    
+    residual7a = y - model7a;
+
+    r6_it = residual7a' * residual7a; 
+    
+   
+    
+    if r6_it > r5_baseline
+        mu = mu * mu_up;
+    end
+    
+     m = m+1
+    if m == 5
+        break
+    end
+end
+    alphatota = [alphatota x5a(1)];
+    omegatota = [omegatota x5a(2)];
+    
+if r6_it < r5_baseline
+    mu = mu/mu_down;
+else
+    mu = mu;
+end
+
+mutot = [mutot mu];
+mtot = [mtot m];
+rtotv = [rtotv r6_it];
+disp('Iteration 6')
+m
+mu
+r6_it
+disp('Next Iteration')
+
+%% Iteration 7
+
+
+r7_it = 1000000000000000;
+r6_baseline = r6_it;
+m = 1;
+
+while r7_it > r6_baseline
+    
+    
+    Ja1 = t.^3 .* exp(alphatota(7) .* t) .* sin(omegatota(7) .* t);
+    Ja2 = t.^2 .* exp(alphatota(7) .* t) .* cos(omegatota(7) .* t);
+    Ja = [Ja1 Ja2];
+      
+    deltaxa = inv(J'*J + mu.*[1 0; 0 1]) *J' * residual7a;
+
+    x6a = x5a - deltaxa;
+    
+    model8a = t .* (exp(x6a(1) .* t)) .* (sin(x6a(2)) .* t);
+    
+    residual8a = y - model8a;
+
+    r7_it = residual8a' * residual8a; 
+    
+   
+    
+    if r7_it > r6_baseline
+        mu = mu * mu_up;
+    end
+    
+     m = m+1
+    if m == 5
+        break
+    end
+end
+    alphatota = [alphatota x6a(1)];
+    omegatota = [omegatota x6a(2)];
+    
+if r7_it < r6_baseline
+    mu = mu/mu_down;
+else
+    mu = mu;
+end
+
+mutot = [mutot mu];
+mtot = [mtot m];
+rtotv = [rtotv r7_it];
+disp('Iteration 7')
+m
+mu
+r7_it
+disp('Next Iteration')
+
+%% Iteration 8
+
+
+r8_it = 1000000000000000;
+r7_baseline = r7_it;
+m = 1;
+
+while r8_it > r7_baseline
+    
+    
+    Ja1 = t.^3 .* exp(alphatota(8) .* t) .* sin(omegatota(8) .* t);
+    Ja2 = t.^2 .* exp(alphatota(8) .* t) .* cos(omegatota(8) .* t);
+    Ja = [Ja1 Ja2];
+      
+    deltaxa = inv(J'*J + mu.*[1 0; 0 1]) *J' * residual8a;
+
+    x7a = x6a - deltaxa;
+    
+    model9a = t .* (exp(x7a(1) .* t)) .* (sin(x7a(2)) .* t);
+    
+    residual9a = y - model9a;
+
+    r8_it = residual9a' * residual9a; 
+    
+   
+    
+    if r8_it > r7_baseline
+        mu = mu * mu_up;
+    end
+    
+     m = m+1
+    if m == 5
+        break
+    end
+end
+    alphatota = [alphatota x7a(1)];
+    omegatota = [omegatota x7a(2)];
+    
+if r8_it < r7_baseline
+    mu = mu/mu_down;
+else
+    mu = mu;
+end
+
+mutot = [mutot mu];
+mtot = [mtot m];
+rtotv = [rtotv r8_it];
+disp('Iteration 8')
+m
+mu
+r8_it
+disp('Next Iteration')
+
+%% Iteration 9
+
+
+r9_it = 1000000000000000;
+r8_baseline = r8_it;
+m = 1;
+
+while r9_it > r8_baseline
+    
+    
+    Ja1 = t.^3 .* exp(alphatota(9) .* t) .* sin(omegatota(9) .* t);
+    Ja2 = t.^2 .* exp(alphatota(9) .* t) .* cos(omegatota(9) .* t);
+    Ja = [Ja1 Ja2];
+      
+    deltaxa = inv(J'*J + mu.*[1 0; 0 1]) *J' * residual9a;
+
+    x8a = x7a - deltaxa;
+    
+    model10a = t .* (exp(x8a(1) .* t)) .* (sin(x8a(2)) .* t);
+    
+    residual10a = y - model10a;
+
+    r9_it = residual10a' * residual10a; 
+    
+   
+    
+    if r9_it > r8_baseline
+        mu = mu * mu_up;
+    end
+    
+     m = m+1
+    if m == 5
+        break
+    end
+end
+    alphatota = [alphatota x8a(1)];
+    omegatota = [omegatota x8a(2)];
+    
+if r9_it < r8_baseline
+    mu = mu/mu_down;
+else
+    mu = mu;
+end
+
+mutot = [mutot mu];
+mtot = [mtot m];
+rtotv = [rtotv r9_it];
+disp('Iteration 9')
+m
+mu
+r9_it
+disp('Next Iteration')
+
+
+%% Iteration 10
+
+
+r10_it = 1000000000000000000;
+r9_baseline = r9_it;
+m = 1;
+
+while r10_it > r9_baseline
+    
+    
+    Ja1 = t.^3 .* exp(alphatota(10) .* t) .* sin(omegatota(10) .* t);
+    Ja2 = t.^2 .* exp(alphatota(10) .* t) .* cos(omegatota(10) .* t);
+    Ja = [Ja1 Ja2];
+      
+    deltaxa = inv(J'*J + mu.*[1 0; 0 1]) *J' * residual10a;
+
+    x9a = x8a - deltaxa;
+    
+    model11a = t .* (exp(x8a(1) .* t)) .* (sin(x8a(2)) .* t);
+    
+    residual11a = y - model11a;
+
+    r10_it = residual11a' * residual11a; 
+    
+   
+    
+    if r10_it > r9_baseline
+        mu = mu * mu_up;
+    end
+    
+     m = m+1
+    if m == 5
+        break
+    end
+end
+    alphatota = [alphatota x9a(1)];
+    omegatota = [omegatota x9a(2)];
+    
+if r10_it < r9_baseline
+    mu = mu/mu_down;
+else
+    mu = mu;
+end
+
+mutot = [mutot mu];
+mtot = [mtot m];
+rtotv = [rtotv r10_it];
+disp('Iteration 10')
+m
+mu
+r10_it
+disp('Next Iteration')
+
+% disp('Required 10 iterations to find final values')
+
+f2 = figure('Name', 'Part 2 Plot over scatter, mu = 1e+05, regular hikes');
+
+scatter(t,y)
+hold on
+plot(t, model10a)
+title('Raw Data and Fit Part 2, \mu = 1e+05, regular hikes')
+xlabel('time')
+ylabel('displacement')
+
+%% Echoing outputs for diary
+diary vjprob1pt2_groupC.txt
+
+echo on
+
+mutot
+mtot
+rtotv
+alphatota
+omegatota
+
+echo off
+##### SOURCE END #####
+--></body></html>

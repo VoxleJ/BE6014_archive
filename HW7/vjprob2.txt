@@ -1,0 +1,4728 @@
+
+mutot
+
+mutot =
+
+   1.0e+16 *
+
+    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0119    0.2980    1.4901    1.4901
+
+rtotv
+
+rtotv =
+
+   55.9632   55.9721   60.8568   60.9611   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612
+
+beta_o = alphatota
+
+beta_o =
+
+    4.0000    4.0022    5.2663    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790
+
+beta_one = omegatota
+
+beta_one =
+
+   -4.0000   -3.9980   -3.6501   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371
+
+
+echo off
+yind = find(y>0,100);
+x(yind)
+
+ans =
+
+    2.5770
+    2.6848
+    2.6896
+    2.7192
+    2.7827
+    2.8355
+    2.8771
+    2.9866
+    2.9881
+    3.1089
+    3.2819
+    3.4250
+    3.5314
+    3.5738
+    3.5764
+    3.6438
+    3.7146
+    3.8267
+    3.8695
+    3.8920
+    3.9441
+    4.0961
+    4.1140
+    4.2330
+    4.3825
+    4.6747
+    4.6796
+    4.7429
+    4.8297
+    4.8458
+    4.9811
+    5.1054
+    5.2004
+    5.2449
+    5.3627
+    5.3807
+    5.3870
+    5.4439
+    5.4961
+    5.6787
+    5.7015
+    5.7446
+    5.8559
+    6.0112
+    6.0366
+    6.0745
+    6.1910
+    6.2202
+    6.3992
+    6.4391
+
+scatter(x(yind), y(yind));
+Prob2
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 2
+
+m =
+
+     5
+
+
+mu =
+
+    1.2500
+
+
+r2_it =
+
+   60.8568
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 3
+
+m =
+
+     5
+
+
+mu =
+
+  781.2500
+
+
+r3_it =
+
+   60.9611
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 4
+
+m =
+
+     5
+
+
+mu =
+
+   4.8828e+05
+
+
+r4_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 5
+
+m =
+
+     5
+
+
+mu =
+
+   3.0518e+08
+
+
+r5_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 6
+
+m =
+
+     5
+
+
+mu =
+
+   1.9073e+11
+
+
+r6_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 7
+
+m =
+
+     5
+
+
+mu =
+
+   1.1921e+14
+
+
+r7_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+Iteration 8
+
+m =
+
+     4
+
+
+mu =
+
+   2.9802e+15
+
+
+r8_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+Iteration 9
+
+m =
+
+     3
+
+
+mu =
+
+   1.4901e+16
+
+
+r9_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+Iteration 10
+
+m =
+
+     2
+
+
+mu =
+
+   1.4901e+16
+
+
+r10_it =
+
+   60.9612
+
+Next Iteration
+
+vertx =
+
+    1.4514
+
+
+mutot
+
+mutot =
+
+   1.0e+16 *
+
+    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0119    0.2980    1.4901    1.4901
+
+rtotv
+
+rtotv =
+
+   55.9632   55.9721   60.8568   60.9611   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612
+
+beta_o = alphatota
+
+beta_o =
+
+    4.0000    4.0022    5.2663    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790
+
+beta_one = omegatota
+
+beta_one =
+
+   -4.0000   -3.9980   -3.6501   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371
+
+
+echo off
+Prob2
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 2
+
+m =
+
+     5
+
+
+mu =
+
+    1.2500
+
+
+r2_it =
+
+   60.8568
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 3
+
+m =
+
+     5
+
+
+mu =
+
+  781.2500
+
+
+r3_it =
+
+   60.9611
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 4
+
+m =
+
+     5
+
+
+mu =
+
+   4.8828e+05
+
+
+r4_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 5
+
+m =
+
+     5
+
+
+mu =
+
+   3.0518e+08
+
+
+r5_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 6
+
+m =
+
+     5
+
+
+mu =
+
+   1.9073e+11
+
+
+r6_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 7
+
+m =
+
+     5
+
+
+mu =
+
+   1.1921e+14
+
+
+r7_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+Iteration 8
+
+m =
+
+     4
+
+
+mu =
+
+   2.9802e+15
+
+
+r8_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+Iteration 9
+
+m =
+
+     3
+
+
+mu =
+
+   1.4901e+16
+
+
+r9_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+Iteration 10
+
+m =
+
+     2
+
+
+mu =
+
+   1.4901e+16
+
+
+r10_it =
+
+   60.9612
+
+Next Iteration
+
+vertx =
+
+    1.4514
+
+
+mutot
+
+mutot =
+
+   1.0e+16 *
+
+    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0119    0.2980    1.4901    1.4901
+
+rtotv
+
+rtotv =
+
+   55.9632   55.9721   60.8568   60.9611   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612
+
+beta_o = alphatota
+
+beta_o =
+
+    4.0000    4.0022    5.2663    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790
+
+beta_one = omegatota
+
+beta_one =
+
+   -4.0000   -3.9980   -3.6501   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371
+
+
+echo off
+Prob2
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 2
+
+m =
+
+     5
+
+
+mu =
+
+    1.2500
+
+
+r2_it =
+
+   60.8568
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 3
+
+m =
+
+     5
+
+
+mu =
+
+  781.2500
+
+
+r3_it =
+
+   60.9611
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 4
+
+m =
+
+     5
+
+
+mu =
+
+   4.8828e+05
+
+
+r4_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 5
+
+m =
+
+     5
+
+
+mu =
+
+   3.0518e+08
+
+
+r5_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 6
+
+m =
+
+     5
+
+
+mu =
+
+   1.9073e+11
+
+
+r6_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 7
+
+m =
+
+     5
+
+
+mu =
+
+   1.1921e+14
+
+
+r7_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+Iteration 8
+
+m =
+
+     4
+
+
+mu =
+
+   2.9802e+15
+
+
+r8_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+Iteration 9
+
+m =
+
+     3
+
+
+mu =
+
+   1.4901e+16
+
+
+r9_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+Iteration 10
+
+m =
+
+     2
+
+
+mu =
+
+   1.4901e+16
+
+
+r10_it =
+
+   60.9612
+
+Next Iteration
+
+vertx =
+
+    1.4514
+
+
+mutot
+
+mutot =
+
+   1.0e+16 *
+
+    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0119    0.2980    1.4901    1.4901
+
+rtotv
+
+rtotv =
+
+   55.9632   55.9721   60.8568   60.9611   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612
+
+beta_o = alphatota
+
+beta_o =
+
+    4.0000    4.0022    5.2663    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790
+
+beta_one = omegatota
+
+beta_one =
+
+   -4.0000   -3.9980   -3.6501   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371
+
+
+echo off
+Prob2
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 2
+
+m =
+
+     5
+
+
+mu =
+
+    1.2500
+
+
+r2_it =
+
+   60.8568
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 3
+
+m =
+
+     5
+
+
+mu =
+
+  781.2500
+
+
+r3_it =
+
+   60.9611
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 4
+
+m =
+
+     5
+
+
+mu =
+
+   4.8828e+05
+
+
+r4_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 5
+
+m =
+
+     5
+
+
+mu =
+
+   3.0518e+08
+
+
+r5_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 6
+
+m =
+
+     5
+
+
+mu =
+
+   1.9073e+11
+
+
+r6_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 7
+
+m =
+
+     5
+
+
+mu =
+
+   1.1921e+14
+
+
+r7_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+Iteration 8
+
+m =
+
+     4
+
+
+mu =
+
+   2.9802e+15
+
+
+r8_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+Iteration 9
+
+m =
+
+     3
+
+
+mu =
+
+   1.4901e+16
+
+
+r9_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+Iteration 10
+
+m =
+
+     2
+
+
+mu =
+
+   1.4901e+16
+
+
+r10_it =
+
+   60.9612
+
+Next Iteration
+
+vertx =
+
+    1.4514
+
+{Operands to the || and && operators must be convertible to logical scalar values.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Prob2', 'G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW7\Prob2.m', 538)" style="font-weight:bold">Prob2</a> (<a href="matlab: opentoline('G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW7\Prob2.m',538,0)">line 538</a>)
+find(y>0 && x>vertx, 100)
+} 
+xind1 = find(x(yind) > vertx, 50);
+tp = length(xind1);
+tp
+
+tp =
+
+    50
+
+xind2 = find(x(yind2) < vertx, 50);
+tf = lengthxind2;
+{Undefined function or variable 'lengthxind2'.
+} 
+xind2 = find(x(yind2) < vertx, 50);
+tf = length(xind2);
+tf
+
+tf =
+
+    17
+
+xind3 = find(x(yind2) > vertx, 50);
+fp = length(xind3)
+
+fp =
+
+    33
+
+xind1 = find(x(yind) > vertx, 50);
+tp = length(xind1);
+xind2 = find(x(yind2) < vertx, 50);
+tf = length(xind2);
+xind3 = find(x(yind2) > vertx, 50);
+fp = length(xind3);
+
+sensitivity = tp/(tp + 0)
+
+sensitivity =
+
+     1
+
+specificity = tf/(tf + fp)
+
+specificity =
+
+    0.3400
+
+find(x(yind) > 0, 50)
+
+ans =
+
+     1
+     2
+     3
+     4
+     5
+     6
+     7
+     8
+     9
+    10
+    11
+    12
+    13
+    14
+    15
+    16
+    17
+    18
+    19
+    20
+    21
+    22
+    23
+    24
+    25
+    26
+    27
+    28
+    29
+    30
+    31
+    32
+    33
+    34
+    35
+    36
+    37
+    38
+    39
+    40
+    41
+    42
+    43
+    44
+    45
+    46
+    47
+    48
+    49
+    50
+
+find(x(yind) < vertx, 50)
+
+ans =
+
+  0×1 empty <a href="matlab:helpPopup double" style="font-weight:bold">double</a> column vector
+
+xind4 = find(x(yind) < vertx, 50);
+fn = length(xind4)
+
+fn =
+
+     0
+
+Prob2
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 2
+
+m =
+
+     5
+
+
+mu =
+
+    1.2500
+
+
+r2_it =
+
+   60.8568
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 3
+
+m =
+
+     5
+
+
+mu =
+
+  781.2500
+
+
+r3_it =
+
+   60.9611
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 4
+
+m =
+
+     5
+
+
+mu =
+
+   4.8828e+05
+
+
+r4_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 5
+
+m =
+
+     5
+
+
+mu =
+
+   3.0518e+08
+
+
+r5_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 6
+
+m =
+
+     5
+
+
+mu =
+
+   1.9073e+11
+
+
+r6_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 7
+
+m =
+
+     5
+
+
+mu =
+
+   1.1921e+14
+
+
+r7_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+Iteration 8
+
+m =
+
+     4
+
+
+mu =
+
+   2.9802e+15
+
+
+r8_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+Iteration 9
+
+m =
+
+     3
+
+
+mu =
+
+   1.4901e+16
+
+
+r9_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+Iteration 10
+
+m =
+
+     2
+
+
+mu =
+
+   1.4901e+16
+
+
+r10_it =
+
+   60.9612
+
+Next Iteration
+
+vertx =
+
+    1.4514
+
+
+mutot
+
+mutot =
+
+   1.0e+16 *
+
+    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0119    0.2980    1.4901    1.4901
+
+rtotv
+
+rtotv =
+
+   55.9632   55.9721   60.8568   60.9611   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612
+
+beta_o = alphatota
+
+beta_o =
+
+    4.0000    4.0022    5.2663    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790
+
+beta_one = omegatota
+
+beta_one =
+
+   -4.0000   -3.9980   -3.6501   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371
+
+sensitivity
+
+sensitivity =
+
+     1
+
+specificity
+
+specificity =
+
+    0.3400
+
+echo off
+Prob2
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 2
+
+m =
+
+     5
+
+
+mu =
+
+    1.2500
+
+
+r2_it =
+
+   60.8568
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 3
+
+m =
+
+     5
+
+
+mu =
+
+  781.2500
+
+
+r3_it =
+
+   60.9611
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 4
+
+m =
+
+     5
+
+
+mu =
+
+   4.8828e+05
+
+
+r4_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 5
+
+m =
+
+     5
+
+
+mu =
+
+   3.0518e+08
+
+
+r5_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 6
+
+m =
+
+     5
+
+
+mu =
+
+   1.9073e+11
+
+
+r6_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 7
+
+m =
+
+     5
+
+
+mu =
+
+   1.1921e+14
+
+
+r7_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+Iteration 8
+
+m =
+
+     4
+
+
+mu =
+
+   2.9802e+15
+
+
+r8_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+Iteration 9
+
+m =
+
+     3
+
+
+mu =
+
+   1.4901e+16
+
+
+r9_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+Iteration 10
+
+m =
+
+     2
+
+
+mu =
+
+   1.4901e+16
+
+
+r10_it =
+
+   60.9612
+
+Next Iteration
+
+vertx =
+
+    1.4514
+
+
+mutot
+
+mutot =
+
+   1.0e+16 *
+
+    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0119    0.2980    1.4901    1.4901
+
+rtotv
+
+rtotv =
+
+   55.9632   55.9721   60.8568   60.9611   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612
+
+beta_o = alphatota
+
+beta_o =
+
+    4.0000    4.0022    5.2663    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790
+
+beta_one = omegatota
+
+beta_one =
+
+   -4.0000   -3.9980   -3.6501   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371
+
+sensitivity
+
+sensitivity =
+
+     1
+
+specificity
+
+specificity =
+
+    0.3400
+
+echo off
+Prob2
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 2
+
+m =
+
+     5
+
+
+mu =
+
+    1.2500
+
+
+r2_it =
+
+   60.8568
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 3
+
+m =
+
+     5
+
+
+mu =
+
+  781.2500
+
+
+r3_it =
+
+   60.9611
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 4
+
+m =
+
+     5
+
+
+mu =
+
+   4.8828e+05
+
+
+r4_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 5
+
+m =
+
+     5
+
+
+mu =
+
+   3.0518e+08
+
+
+r5_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 6
+
+m =
+
+     5
+
+
+mu =
+
+   1.9073e+11
+
+
+r6_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 7
+
+m =
+
+     5
+
+
+mu =
+
+   1.1921e+14
+
+
+r7_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+Iteration 8
+
+m =
+
+     4
+
+
+mu =
+
+   2.9802e+15
+
+
+r8_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+Iteration 9
+
+m =
+
+     3
+
+
+mu =
+
+   1.4901e+16
+
+
+r9_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+Iteration 10
+
+m =
+
+     2
+
+
+mu =
+
+   1.4901e+16
+
+
+r10_it =
+
+   60.9612
+
+Next Iteration
+
+vertx =
+
+    1.4514
+
+
+mutot
+
+mutot =
+
+   1.0e+16 *
+
+    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0119    0.2980    1.4901    1.4901
+
+rtotv
+
+rtotv =
+
+   55.9632   55.9721   60.8568   60.9611   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612
+
+beta_o = alphatota
+
+beta_o =
+
+    4.0000    4.0022    5.2663    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790
+
+beta_one = omegatota
+
+beta_one =
+
+   -4.0000   -3.9980   -3.6501   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371
+
+sensitivity
+
+sensitivity =
+
+     1
+
+specificity
+
+specificity =
+
+    0.3400
+
+echo off
+Prob2
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 2
+
+m =
+
+     5
+
+
+mu =
+
+    1.2500
+
+
+r2_it =
+
+   60.8568
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 3
+
+m =
+
+     5
+
+
+mu =
+
+  781.2500
+
+
+r3_it =
+
+   60.9611
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 4
+
+m =
+
+     5
+
+
+mu =
+
+   4.8828e+05
+
+
+r4_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 5
+
+m =
+
+     5
+
+
+mu =
+
+   3.0518e+08
+
+
+r5_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 6
+
+m =
+
+     5
+
+
+mu =
+
+   1.9073e+11
+
+
+r6_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 7
+
+m =
+
+     5
+
+
+mu =
+
+   1.1921e+14
+
+
+r7_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+Iteration 8
+
+m =
+
+     4
+
+
+mu =
+
+   2.9802e+15
+
+
+r8_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+Iteration 9
+
+m =
+
+     3
+
+
+mu =
+
+   1.4901e+16
+
+
+r9_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+Iteration 10
+
+m =
+
+     2
+
+
+mu =
+
+   1.4901e+16
+
+
+r10_it =
+
+   60.9612
+
+Next Iteration
+
+vertx =
+
+    1.4514
+
+
+mutot
+
+mutot =
+
+   1.0e+16 *
+
+    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0119    0.2980    1.4901    1.4901
+
+rtotv
+
+rtotv =
+
+   55.9632   55.9721   60.8568   60.9611   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612
+
+beta_o = alphatota
+
+beta_o =
+
+    4.0000    4.0022    5.2663    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790
+
+beta_one = omegatota
+
+beta_one =
+
+   -4.0000   -3.9980   -3.6501   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371
+
+sensitivity
+
+sensitivity =
+
+     1
+
+specificity
+
+specificity =
+
+    0.3400
+
+echo off
+Prob2
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 2
+
+m =
+
+     5
+
+
+mu =
+
+    1.2500
+
+
+r2_it =
+
+   60.8568
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 3
+
+m =
+
+     5
+
+
+mu =
+
+  781.2500
+
+
+r3_it =
+
+   60.9611
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 4
+
+m =
+
+     5
+
+
+mu =
+
+   4.8828e+05
+
+
+r4_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 5
+
+m =
+
+     5
+
+
+mu =
+
+   3.0518e+08
+
+
+r5_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 6
+
+m =
+
+     5
+
+
+mu =
+
+   1.9073e+11
+
+
+r6_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 7
+
+m =
+
+     5
+
+
+mu =
+
+   1.1921e+14
+
+
+r7_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+Iteration 8
+
+m =
+
+     4
+
+
+mu =
+
+   2.9802e+15
+
+
+r8_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+Iteration 9
+
+m =
+
+     3
+
+
+mu =
+
+   1.4901e+16
+
+
+r9_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+Iteration 10
+
+m =
+
+     2
+
+
+mu =
+
+   1.4901e+16
+
+
+r10_it =
+
+   60.9612
+
+Next Iteration
+
+vertx =
+
+    1.4514
+
+
+mutot
+
+mutot =
+
+   1.0e+16 *
+
+    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0119    0.2980    1.4901    1.4901
+
+rtotv
+
+rtotv =
+
+   55.9632   55.9721   60.8568   60.9611   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612
+
+beta_o = alphatota
+
+beta_o =
+
+    4.0000    4.0022    5.2663    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790
+
+beta_one = omegatota
+
+beta_one =
+
+   -4.0000   -3.9980   -3.6501   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371
+
+sensitivity
+
+sensitivity =
+
+     1
+
+specificity
+
+specificity =
+
+    0.3400
+
+echo off
+Prob2
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 2
+
+m =
+
+     5
+
+
+mu =
+
+    1.2500
+
+
+r2_it =
+
+   60.8568
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 3
+
+m =
+
+     5
+
+
+mu =
+
+  781.2500
+
+
+r3_it =
+
+   60.9611
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 4
+
+m =
+
+     5
+
+
+mu =
+
+   4.8828e+05
+
+
+r4_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 5
+
+m =
+
+     5
+
+
+mu =
+
+   3.0518e+08
+
+
+r5_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 6
+
+m =
+
+     5
+
+
+mu =
+
+   1.9073e+11
+
+
+r6_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 7
+
+m =
+
+     5
+
+
+mu =
+
+   1.1921e+14
+
+
+r7_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+Iteration 8
+
+m =
+
+     4
+
+
+mu =
+
+   2.9802e+15
+
+
+r8_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+Iteration 9
+
+m =
+
+     3
+
+
+mu =
+
+   1.4901e+16
+
+
+r9_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+Iteration 10
+
+m =
+
+     2
+
+
+mu =
+
+   1.4901e+16
+
+
+r10_it =
+
+   60.9612
+
+Next Iteration
+
+vertx =
+
+    1.4514
+
+
+mutot
+
+mutot =
+
+   1.0e+16 *
+
+    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0119    0.2980    1.4901    1.4901
+
+rtotv
+
+rtotv =
+
+   55.9632   55.9721   60.8568   60.9611   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612
+
+beta_o = alphatota
+
+beta_o =
+
+    4.0000    4.0022    5.2663    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790
+
+beta_one = omegatota
+
+beta_one =
+
+   -4.0000   -3.9980   -3.6501   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371
+
+sensitivity
+
+sensitivity =
+
+     1
+
+specificity
+
+specificity =
+
+    0.3400
+
+echo off
+Prob2
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 2
+
+m =
+
+     5
+
+
+mu =
+
+    1.2500
+
+
+r2_it =
+
+   60.8568
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 3
+
+m =
+
+     5
+
+
+mu =
+
+  781.2500
+
+
+r3_it =
+
+   60.9611
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 4
+
+m =
+
+     5
+
+
+mu =
+
+   4.8828e+05
+
+
+r4_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 5
+
+m =
+
+     5
+
+
+mu =
+
+   3.0518e+08
+
+
+r5_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 6
+
+m =
+
+     5
+
+
+mu =
+
+   1.9073e+11
+
+
+r6_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 7
+
+m =
+
+     5
+
+
+mu =
+
+   1.1921e+14
+
+
+r7_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+Iteration 8
+
+m =
+
+     4
+
+
+mu =
+
+   2.9802e+15
+
+
+r8_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+Iteration 9
+
+m =
+
+     3
+
+
+mu =
+
+   1.4901e+16
+
+
+r9_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+Iteration 10
+
+m =
+
+     2
+
+
+mu =
+
+   1.4901e+16
+
+
+r10_it =
+
+   60.9612
+
+Next Iteration
+
+vertx =
+
+    1.4514
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('line')" style="font-weight:bold">line</a>
+Invalid data argument.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Prob2', 'G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW7\Prob2.m', 532)" style="font-weight:bold">Prob2</a> (<a href="matlab: opentoline('G:\My Drive\Boston University\05_MS1\BE601_604\HW\HW7\Prob2.m',532,0)">line 532</a>)
+line([vertx vertx], [0 1], 'r')
+} 
+Prob2
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 2
+
+m =
+
+     5
+
+
+mu =
+
+    1.2500
+
+
+r2_it =
+
+   60.8568
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 3
+
+m =
+
+     5
+
+
+mu =
+
+  781.2500
+
+
+r3_it =
+
+   60.9611
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 4
+
+m =
+
+     5
+
+
+mu =
+
+   4.8828e+05
+
+
+r4_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 5
+
+m =
+
+     5
+
+
+mu =
+
+   3.0518e+08
+
+
+r5_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 6
+
+m =
+
+     5
+
+
+mu =
+
+   1.9073e+11
+
+
+r6_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 7
+
+m =
+
+     5
+
+
+mu =
+
+   1.1921e+14
+
+
+r7_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+Iteration 8
+
+m =
+
+     4
+
+
+mu =
+
+   2.9802e+15
+
+
+r8_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+Iteration 9
+
+m =
+
+     3
+
+
+mu =
+
+   1.4901e+16
+
+
+r9_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+Iteration 10
+
+m =
+
+     2
+
+
+mu =
+
+   1.4901e+16
+
+
+r10_it =
+
+   60.9612
+
+Next Iteration
+
+vertx =
+
+    1.4514
+
+
+mutot
+
+mutot =
+
+   1.0e+16 *
+
+    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0119    0.2980    1.4901    1.4901
+
+rtotv
+
+rtotv =
+
+   55.9632   55.9721   60.8568   60.9611   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612
+
+beta_o = alphatota
+
+beta_o =
+
+    4.0000    4.0022    5.2663    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790
+
+beta_one = omegatota
+
+beta_one =
+
+   -4.0000   -3.9980   -3.6501   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371
+
+sensitivity
+
+sensitivity =
+
+     1
+
+specificity
+
+specificity =
+
+    0.3400
+
+echo off
+Prob2
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 2
+
+m =
+
+     5
+
+
+mu =
+
+    1.2500
+
+
+r2_it =
+
+   60.8568
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 3
+
+m =
+
+     5
+
+
+mu =
+
+  781.2500
+
+
+r3_it =
+
+   60.9611
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 4
+
+m =
+
+     5
+
+
+mu =
+
+   4.8828e+05
+
+
+r4_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 5
+
+m =
+
+     5
+
+
+mu =
+
+   3.0518e+08
+
+
+r5_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 6
+
+m =
+
+     5
+
+
+mu =
+
+   1.9073e+11
+
+
+r6_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+
+m =
+
+     5
+
+Iteration 7
+
+m =
+
+     5
+
+
+mu =
+
+   1.1921e+14
+
+
+r7_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+
+m =
+
+     4
+
+Iteration 8
+
+m =
+
+     4
+
+
+mu =
+
+   2.9802e+15
+
+
+r8_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+
+m =
+
+     3
+
+Iteration 9
+
+m =
+
+     3
+
+
+mu =
+
+   1.4901e+16
+
+
+r9_it =
+
+   60.9612
+
+Next Iteration
+
+m =
+
+     2
+
+Iteration 10
+
+m =
+
+     2
+
+
+mu =
+
+   1.4901e+16
+
+
+r10_it =
+
+   60.9612
+
+Next Iteration
+
+vertx =
+
+    1.4514
+
+
+mutot
+
+mutot =
+
+   1.0e+16 *
+
+    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0119    0.2980    1.4901    1.4901
+
+rtotv
+
+rtotv =
+
+   55.9632   55.9721   60.8568   60.9611   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612   60.9612
+
+beta_o = alphatota
+
+beta_o =
+
+    4.0000    4.0022    5.2663    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790    5.2790
+
+beta_one = omegatota
+
+beta_one =
+
+   -4.0000   -3.9980   -3.6501   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371   -3.6371
+
+sensitivity
+
+sensitivity =
+
+     1
+
+specificity
+
+specificity =
+
+    0.3400
+
+echo off
+clear all
+clc
