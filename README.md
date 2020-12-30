@@ -1,2 +1,2 @@
-# BE6014_archive
-Archive HW Assignments for BE601/4
+# BU ENG BE 601/604 Archive
+An archive containing homework assignments for BE601/604.
